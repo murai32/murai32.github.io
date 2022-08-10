@@ -126,8 +126,6 @@ filterBlock.querySelector(".FiltersContainer").appendChild(filterElements); // �
 setProjectDate(projectsData); // Убираем передваемою в подзаголовок информацию, вставляя туда дату проекта
 
 
-console.log("productsFilters.js подключен через https://cdn.jsdelivr.net");
-// console.log("productsFilters.js подключен через https://cdn.jsdelivr.net");
-
+console.warn("productsFilters.js подключен через github pages (https://murai32.github.io)");
 
 })
