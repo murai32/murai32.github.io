@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function(event) {
+
 /*ПАРСИМ ИНФОРМАЦИЮ О ПРОЕКТОВ ИЗ БЛОКА "СЕТКА ОБЪЕКТОВ"*/
 
 function parseProjectsBlock (blockClass){
@@ -124,6 +126,7 @@ filterBlock.querySelector(".FiltersContainer").appendChild(filterElements); // �
 setProjectDate(projectsData); // Убираем передваемою в подзаголовок информацию, вставляя туда дату проекта
 
 
+console.log("productsFilters.js подключен");
 
 
-
+})
