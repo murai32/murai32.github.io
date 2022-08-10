@@ -127,6 +127,7 @@ setProjectDate(projectsData); // Убираем передваемою в под
 
 
 console.log("productsFilters.js подключен через https://cdn.jsdelivr.net");
+// console.log("productsFilters.js подключен через https://cdn.jsdelivr.net");
 
 
 })
