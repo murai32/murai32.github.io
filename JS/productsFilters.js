@@ -86,6 +86,11 @@ function gatherAllProjectIntoOneBlock (data){
 /*ОБРАБОТКА СОБЫТИЯ "КЛИК ПО ПАРАМЕТРУ ФИЛЬТРАЦИИ ПО ТИПУ ОБЪЕКТА"*/
 
 function filterProjectsBlockByType (filterProp){
+
+	console.log("Происходит вызов функции filterProjectsBlockByType()");
+	console.log("Параметр фильтрации: " +filterProp);
+
+
 	// Производим выборку карточек проекта по значению атрибута "data-filter-by-type"
   for (let elem of document.querySelector(".uc-projects-block").querySelectorAll('[data-filter-by-type]')) {
 	  // Если приходит значение аргумента функции "Все", то произвожу выборку по классу "ProjectCard_hidden" и удаляю его
