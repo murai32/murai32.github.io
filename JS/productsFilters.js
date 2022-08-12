@@ -90,11 +90,10 @@ function filterProjectsBlockByType (filterProp){
 	console.log("Происходит вызов функции filterProjectsBlockByType()");
 	console.log("Параметр фильтрации: " +filterProp);
 
-
 	// Производим выборку карточек проекта по значению атрибута "data-filter-by-type"
   for (let elem of document.querySelector(".uc-projects-block").querySelectorAll('[data-filter-by-type]')) {
 	  // Если приходит значение аргумента функции "Все", то произвожу выборку по классу "ProjectCard_hidden" и удаляю его
-	  if (filterProp = "Все"){
+	  if (filterProp == "Все"){
 	  	if(elem.classList.contains('ProjectCard_hidden')){
 	  		elem.classList.remove('ProjectCard_hidden');
 	  	} 
