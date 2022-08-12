@@ -17,8 +17,8 @@ function parseProjectsBlock (blockClass){
 				projectData.projectElm = data.closest('.t404__col');// каждому объекту необходимо дать ссылку на связанный с ним DOM Node (projectNode)
 				projects.push(projectData); // добавляем JSON объект в массив
 			} catch(err) {
-				console.error("Парсинг данных объекта не удался." + data.closest('.t404__col').querySelector('.t404__titel').innerText());
-				console.error("Проверь корректность возвращаемых данных из параметра 'Подзаголовок' в настройках страницы на которую ссылается данная карточка:\n" + data.closest('.t404__col').querySelector('.t404__tag').innerText());
+					console.error("Парсинг данных объекта не удался." + data.closest('.t404__col').querySelector('.t404__titel').innerText());
+					console.error("Проверь корректность возвращаемых данных из параметра 'Подзаголовок' в настройках страницы на которую ссылается данная карточка:\n" + data.closest('.t404__col').querySelector('.t404__tag').innerText());
 		  		console.error(err.name);
 		  		console.error(err.message);
 			}
@@ -99,11 +99,40 @@ function filterProjectsBlockByType (filterProp){
 		  	// То необходимо показать все искомые карточки cо значением атрибута "data-filter-by-type".
       	elem.classList.remove("ProjectCard_hidden");
     	} else {
-    		// А не удовлетворяющие парметрам фильтращии скрыть
+    		// А не удовлетворяющие парметрам фильтрации скрыть
     		elem.classList.add("ProjectCard_hidden");
     	}
 	  }
   }
+}
+
+
+/*ДОБАВЛЕНИЕ ОБРАБОТЧИКОВ СОБЫТИЙ ЭЛЕМЕНТАМ ФИЛЬТРА ПО ТИПУ ОБЪЕКТА*/
+
+function setEventListeners (container){
+
+	// если функцию буду выводить после добавления блока с фильтром по типу, то (??) надо делать проверку на существование элемента на который ставиться событие?
+	// этот обработчик можно повесить на .FilterByType-ChipsBlock, а в функцию передавать event
+	// где буду смотреть event.currentTarget
+	// если НЕ event.currentTarget.matches(".FilterByType-ChoiceChip a")
+	// тогда от event.currentTarget буду делать поиск элемент event.currentTarget.querySelector(".FilterByType-ChoiceChip a")
+	//
+	// из которого получать значение атрибута [data-filter-option]
+	// let attribute = element.getAttribute("data-filter-option");
+
+	container = container.querySelector('.FilterByType-ChipsBlock');
+	container.addEventListener("click", function(event){
+		let elm = event.currentTarget;
+		if (!event.currentTarget.matches(".FilterByType-ChoiceChip a")){ 
+			// Производим проверку на то является ли элемент на который кликнули ".FilterByType-ChoiceChip a"
+			// Нет, тогда находим ближайшего потомка и фиксируем его как целевой эдемент
+			elm = event.currentTarget.querySelector(".FilterByType-ChoiceChip a")
+		}
+		// Отправляем данные в функцию которая будет манипулировать с блоком карточек объектов
+		filterProjectsBlockByType(elm.getAttribute("data-filter-option")); 
+	});
+
+
 }
 
 
@@ -117,7 +146,10 @@ const filterBlock = document.querySelector(".uc-projects-filter"); // ссылк
 let projectsData = parseProjectsBlock(".uc-projects-block"); // Получаем JSON с информацией о проектах
 let filterElements = createFilterStructure (createFilterTypesList ()); // 1.) Создаем список уникальных параметров фильтрации 2.) Создаем контрол, который далее вставим в нужный узел
 
+setEventListeners(filterElements); // Инициализируем обработчик событий для фильтров по типу объекта
+
 filterBlock.querySelector(".FiltersContainer").appendChild(filterElements); // Добавляем варианты филльтрации в фильтра по (виду проекта)
+
 
 
 
