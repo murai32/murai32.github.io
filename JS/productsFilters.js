@@ -123,16 +123,19 @@ function setEventListeners (container){
 	// let attribute = element.getAttribute("data-filter-option");
 
 	container.querySelector('.FilterByType-ChipsBlock').addEventListener("click", function(event){
-		console.log('сработал обработчик по клику на: ' +event.currentTarget);
+		console.log('сработал обработчик по клику на: ');
+		console.log(event.target);
 
-		let elm = event.currentTarget;
-		if (!event.currentTarget.matches(".FilterByType-ChoiceChip a")){ 
+		let elem = event.target;
+		if (!event.target.matches(".FilterByType-ChoiceChip a")){ 
 			// Производим проверку на то является ли элемент на который кликнули ".FilterByType-ChoiceChip a"
 			// Нет, тогда находим ближайшего потомка и фиксируем его как целевой эдемент
-			elm = event.currentTarget.querySelector(".FilterByType-ChoiceChip a")
+			elem = event.currentTarget.querySelector(".FilterByType-ChoiceChip a")
 		}
+
+		console.log(elem.getAttribute("data-filter-option"))
 		// Отправляем данные в функцию которая будет манипулировать с блоком карточек объектов
-		filterProjectsBlockByType(elm.getAttribute("data-filter-option")); 
+		filterProjectsBlockByType(elem.getAttribute("data-filter-option")); 
 	});
 
 
