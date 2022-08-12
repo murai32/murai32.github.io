@@ -157,11 +157,11 @@ const filterBlock = document.querySelector(".uc-projects-filter"); // ссылк
 let projectsData = parseProjectsBlock(".uc-projects-block"); // Получаем JSON с информацией о проектах
 let filterElements = createFilterStructure (createFilterTypesList ()); // 1.) Создаем список уникальных параметров фильтрации 2.) Создаем контрол, который далее вставим в нужный узел
 
-setEventListeners(filterElements); // Инициализируем обработчик событий для фильтров по типу объекта
+
 
 filterBlock.querySelector(".FiltersContainer").appendChild(filterElements); // Добавляем варианты филльтрации в фильтра по (виду проекта)
 
-
+setEventListeners(filterElements); // Инициализируем обработчик событий для фильтров по типу объекта
 
 
 /*МАНИПУЛЯЦИИ С БЛОКОМ ПРОЕКТЫ*/
