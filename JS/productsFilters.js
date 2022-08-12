@@ -120,8 +120,7 @@ function setEventListeners (container){
 	// из которого получать значение атрибута [data-filter-option]
 	// let attribute = element.getAttribute("data-filter-option");
 
-	container = container.querySelector('.FilterByType-ChipsBlock');
-	container.addEventListener("click", function(event){
+	container.querySelector('.FilterByType-ChipsBlock').addEventListener("click", function(event){
 		let elm = event.currentTarget;
 		if (!event.currentTarget.matches(".FilterByType-ChoiceChip a")){ 
 			// Производим проверку на то является ли элемент на который кликнули ".FilterByType-ChoiceChip a"
