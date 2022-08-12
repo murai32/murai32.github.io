@@ -111,6 +111,8 @@ function filterProjectsBlockByType (filterProp){
 
 function setEventListeners (container){
 
+	console.log("расставляю обработчики события Click");
+	console.dir(container);
 	// если функцию буду выводить после добавления блока с фильтром по типу, то (??) надо делать проверку на существование элемента на который ставиться событие?
 	// этот обработчик можно повесить на .FilterByType-ChipsBlock, а в функцию передавать event
 	// где буду смотреть event.currentTarget
@@ -121,6 +123,8 @@ function setEventListeners (container){
 	// let attribute = element.getAttribute("data-filter-option");
 
 	container.querySelector('.FilterByType-ChipsBlock').addEventListener("click", function(event){
+		console.log('сработал обработчик по клику на: ' +event.currentTarget);
+
 		let elm = event.currentTarget;
 		if (!event.currentTarget.matches(".FilterByType-ChoiceChip a")){ 
 			// Производим проверку на то является ли элемент на который кликнули ".FilterByType-ChoiceChip a"
