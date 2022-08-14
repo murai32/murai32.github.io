@@ -81,11 +81,11 @@ static gatherAllProjectIntoOneBlock (data){
 	constructor(){
 
 		/*СОБИРАЕМ ИНФОРМАЦИЮ*/
-		setProjectsData(); // Получаем JSON с информацией о проектах. Парсим блок с карточками проектов. 
+		this.setProjectsData(); // Получаем JSON с информацией о проектах. Парсим блок с карточками проектов. 
 		
 
 		/*МАНИПУЛЯЦИИ С БЛОКОМ ПРОЕКТЫ*/
-		setProjectDate(getProjectsData()); // Убираем передваемою в подзаголовок информацию, вставляя туда дату проекта
+		this.setProjectDate(this.getProjectsData()); // Убираем передваемою в подзаголовок информацию, вставляя туда дату проекта
 
 		console.warn("productsFilters.js подключен через github pages (https://murai32.github.io)");
 	}
@@ -181,9 +181,9 @@ class FilterByType extends Filter {
 
 		this.filterControls = createFilterStructure (createFilterTypesList ()); // 1.) Создаем список уникальных параметров фильтрации 2.) Создаем контрол, который далее вставим в нужный узел
 
-		filterBlock.querySelector(".FiltersContainer").appendChild(this.filterControls); // Добавляем варианты филльтрации в фильтра по (виду проекта)
+		this.filterBlock.querySelector(".FiltersContainer").appendChild(this.filterControls); // Добавляем варианты филльтрации в фильтра по (виду проекта)
 
-		setEventListeners(this.filterControls); // Инициализируем обработчик событий для фильтров по типу объекта
+		this.setEventListeners(this.filterControls); // Инициализируем обработчик событий для фильтров по типу объекта
 
 
 	}
