@@ -81,11 +81,11 @@ static gatherAllProjectIntoOneBlock (data){
 	constructor(){
 
 		/*СОБИРАЕМ ИНФОРМАЦИЮ*/
-		this.setProjectsData(); // Получаем JSON с информацией о проектах. Парсим блок с карточками проектов. 
+		Filter.setProjectsData(); // Получаем JSON с информацией о проектах. Парсим блок с карточками проектов. 
 		
 
 		/*МАНИПУЛЯЦИИ С БЛОКОМ ПРОЕКТЫ*/
-		this.setProjectDate(this.getProjectsData()); // Убираем передваемою в подзаголовок информацию, вставляя туда дату проекта
+		Filter.setProjectDate(Filter.getProjectsData()); // Убираем передваемою в подзаголовок информацию, вставляя туда дату проекта
 
 		console.warn("productsFilters.js подключен через github pages (https://murai32.github.io)");
 	}
