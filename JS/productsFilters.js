@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 class Filter {
 	
 	static filterBlock = document.querySelector(".uc-projects-filter"); // ссылка на блок с контролами фильтра (ссылку на блок оставим напрозапас)
-
 	static _projectsData;
 
 
@@ -179,7 +178,7 @@ class FilterByType extends Filter {
 	constructor(){
 		super(); //Вызываем родительский конструктор
 
-		this.filterControls = createFilterStructure (createFilterTypesList ()); // 1.) Создаем список уникальных параметров фильтрации 2.) Создаем контрол, который далее вставим в нужный узел
+		this.filterControls = this.createFilterStructure (this.createFilterTypesList ()); // 1.) Создаем список уникальных параметров фильтрации 2.) Создаем контрол, который далее вставим в нужный узел
 
 		this.filterBlock.querySelector(".FiltersContainer").appendChild(this.filterControls); // Добавляем варианты филльтрации в фильтра по (виду проекта)
 
