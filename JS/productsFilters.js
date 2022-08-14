@@ -42,7 +42,7 @@ class Filter {
 	// Интерфейс для получения и обновления JSON объекта с информацией о проектах
   static setProjectsData() {
     if (!document.querySelector(".uc-projects-block").matches(".uc-projects-block")) throw new Error("На странице отсутсвует блок 'Все проекты', либо ему не задан CSS-класс '.uc-projects-block'");
-    this._projectsData = parseProjectsBlock(".uc-projects-block");
+    this._projectsData = this.parseProjectsBlock(".uc-projects-block");
   }
 
   // Интерфейс возвращающий данные JSON "Все проекты"
