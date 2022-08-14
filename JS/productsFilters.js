@@ -97,7 +97,7 @@ class FilterByType extends Filter {
 
 	/*СОЗДАЕМ СПИСОК С УНИКАЛЬНЫМИ ПАРМЕТРАМИ ФИЛЬТРАЦИИ (ПО ТИПУ ОБЪЕКТА)*/
 
-	function createFilterTypesList () {	
+	createFilterTypesList () {	
 		// Формируем список уникальных параметров ("типов") по которым будет проходить фильтрация
 		let typesList = new Set();
 		projectsData.forEach((data) => { // добавляем список "типов проектов для фильтрации
@@ -110,7 +110,7 @@ class FilterByType extends Filter {
 
 	/*СОБИРАЕМ БЛОК "ФИЛЬТР ПО ТИПУ ОБЪЕКТА"*/
 
-	function createFilterStructure (typesList){
+	createFilterStructure (typesList){
 			const filterBaseStructure = "<div class='FilterByType'><label class='FilterByType-Label'>Вид проекта</label><ul class='FilterByType-ChipsBlock'><li class='FilterByType-ChoiceChip FilterByType-ChoiceChip_active'><a href='javascript:void(0);' data-filter-option='Все'>Все</a></li></ul></div>";
 			let parser = new DOMParser();
 			let filterControl = parser.parseFromString(filterBaseStructure, "text/html").querySelector('.FilterByType'); // трансформируем строку с нужным HTML в DOM элементы
@@ -128,7 +128,7 @@ class FilterByType extends Filter {
 
 	/*ОБРАБОТКА СОБЫТИЯ "КЛИК ПО ПАРАМЕТРУ ФИЛЬТРАЦИИ ПО ТИПУ ОБЪЕКТА"*/
 
-	function filterProjectsBlockByType (filterProp){
+	filterProjectsBlockByType (filterProp){
 
 		// Производим выборку карточек проекта по значению атрибута "data-filter-by-type"
 	  for (let elem of document.querySelector(".uc-projects-block").querySelectorAll('[data-filter-by-type]')) {
@@ -154,7 +154,7 @@ class FilterByType extends Filter {
 
 	/*ДОБАВЛЕНИЕ ОБРАБОТЧИКОВ СОБЫТИЙ ЭЛЕМЕНТАМ ФИЛЬТРА ПО ТИПУ ОБЪЕКТА*/
 
-	function setEventListeners (container){
+	setEventListeners (container){
 
 		container.querySelector('.FilterByType-ChipsBlock').addEventListener("click", function(event){
 
