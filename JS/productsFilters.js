@@ -1,6 +1,3 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-
-
 class Filter {
 	
 	static filterBlock = document.querySelector(".uc-projects-filter"); // ссылка на блок с контролами фильтра (ссылку на блок оставим напрозапас)
@@ -94,11 +91,6 @@ static gatherAllProjectIntoOneBlock (data){
 
 class FilterByType extends Filter {
 
-
-	sayHi(){
-		alert('Привет');
-	}
-
 	/*СОЗДАЕМ СПИСОК С УНИКАЛЬНЫМИ ПАРМЕТРАМИ ФИЛЬТРАЦИИ (ПО ТИПУ ОБЪЕКТА)*/
 
 	createFilterTypesList () {	
@@ -159,9 +151,8 @@ class FilterByType extends Filter {
 	/*ДОБАВЛЕНИЕ ОБРАБОТЧИКОВ СОБЫТИЙ ЭЛЕМЕНТАМ ФИЛЬТРА ПО ТИПУ ОБЪЕКТА*/
 
 	setEventListeners (container){
-		console.log(this.self);
 		console.log(this);
-		this.sayHi();
+		
 		let that = this;
 		container.querySelector('.FilterByType-ChipsBlock').addEventListener("click", function(event){
 
@@ -191,7 +182,6 @@ class FilterByType extends Filter {
 
 	constructor(){
 		super(); //Вызываем родительский конструктор
-		this.self = this;
 
 		this.filterControls = this.createFilterStructure (this.createFilterTypesList ()); // 1.) Создаем список уникальных параметров фильтрации 2.) Создаем контрол, который далее вставим в нужный узел
 
@@ -203,7 +193,10 @@ class FilterByType extends Filter {
 	}
 }
 
+let filterByType;
 
-let filterByType = new FilterByType();
+document.addEventListener("DOMContentLoaded", function(event) {
+
+	filterByType = new FilterByType();
 
 })
