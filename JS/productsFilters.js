@@ -159,8 +159,15 @@ class FilterByType extends Filter {
 	/*ДОБАВЛЕНИЕ ОБРАБОТЧИКОВ СОБЫТИЙ ЭЛЕМЕНТАМ ФИЛЬТРА ПО ТИПУ ОБЪЕКТА*/
 
 	setEventListeners (container){
-		sayHi();
+		console.log(this);
+		this.sayHi();
 		container.querySelector('.FilterByType-ChipsBlock').addEventListener("click", function(event){
+
+			/*ОПИСАНИЕ ПРОБЛЕМЫ*/
+			/*Потерян контекст. Значение this не является ссылка на текущий экземпляр класса. 
+			А ссылается на текущий элемент container.querySelector('.FilterByType-ChipsBlock')
+			Необходимо пробросить this внутрь этой функции*/
+			/*КОНЕЦ ОПИСАНИЯ*/
 
 			let elem = event.target;
 			if (!event.target.matches(".FilterByType-ChoiceChip a")){ 
