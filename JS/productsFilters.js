@@ -169,7 +169,7 @@ class FilterByType extends Filter {
 
 			// Тут надо дать команду на установку класса-модификатара - active для элмента на который кликнули 
 			// и удаления этого класса модификатора с того элемента где он стоял
-			filterBlock.querySelector('.FilterByType-ChoiceChip_active').classList.remove('FilterByType-ChoiceChip_active');
+			this.filterBlock.querySelector('.FilterByType-ChoiceChip_active').classList.remove('FilterByType-ChoiceChip_active');
 			elem.closest("li").classList.add('FilterByType-ChoiceChip_active');
 
 		});
@@ -180,7 +180,7 @@ class FilterByType extends Filter {
 
 		this.filterControls = this.createFilterStructure (this.createFilterTypesList ()); // 1.) Создаем список уникальных параметров фильтрации 2.) Создаем контрол, который далее вставим в нужный узел
 
-		this.filterBlock.querySelector(".FiltersContainer").appendChild(this.filterControls); // Добавляем варианты филльтрации в фильтра по (виду проекта)
+		FilterByType.filterBlock.querySelector(".FiltersContainer").appendChild(this.filterControls); // Добавляем варианты филльтрации в фильтра по (виду проекта)
 
 		this.setEventListeners(this.filterControls); // Инициализируем обработчик событий для фильтров по типу объекта
 
