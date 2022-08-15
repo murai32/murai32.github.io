@@ -165,7 +165,8 @@ class FilterByType extends Filter {
 			}
 
 			// Отправляем данные в функцию которая будет манипулировать с блоком карточек объектов
-			this.filterProjectsBlockByType(elem.getAttribute("data-filter-option")); 
+			console.log(typeof this.filterProjectsBlockByType(elem.getAttribute("data-filter-option"))); 
+			// this.filterProjectsBlockByType(elem.getAttribute("data-filter-option")); 
 
 			// Тут надо дать команду на установку класса-модификатара - active для элмента на который кликнули 
 			// и удаления этого класса модификатора с того элемента где он стоял
