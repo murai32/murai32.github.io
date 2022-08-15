@@ -159,8 +159,10 @@ class FilterByType extends Filter {
 	/*ДОБАВЛЕНИЕ ОБРАБОТЧИКОВ СОБЫТИЙ ЭЛЕМЕНТАМ ФИЛЬТРА ПО ТИПУ ОБЪЕКТА*/
 
 	setEventListeners (container){
+		console.log(this.self);
 		console.log(this);
 		this.sayHi();
+		let that = this;
 		container.querySelector('.FilterByType-ChipsBlock').addEventListener("click", function(event){
 
 			/*ОПИСАНИЕ ПРОБЛЕМЫ*/
@@ -177,11 +179,11 @@ class FilterByType extends Filter {
 			}
 
 			// Отправляем данные в функцию которая будет манипулировать с блоком карточек объектов
-			this.filterProjectsBlockByType(elem.getAttribute("data-filter-option")); 
+			that.filterProjectsBlockByType(elem.getAttribute("data-filter-option")); 
 
 			// Тут надо дать команду на установку класса-модификатара - active для элмента на который кликнули 
 			// и удаления этого класса модификатора с того элемента где он стоял
-			this.filterBlock.querySelector('.FilterByType-ChoiceChip_active').classList.remove('FilterByType-ChoiceChip_active');
+			FilterByType.filterBlock.querySelector('.FilterByType-ChoiceChip_active').classList.remove('FilterByType-ChoiceChip_active');
 			elem.closest("li").classList.add('FilterByType-ChoiceChip_active');
 
 		});
