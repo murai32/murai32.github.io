@@ -99,6 +99,7 @@ class FilterByType extends Filter {
 	createFilterTypesList () {	
 		// Формируем список уникальных параметров ("типов") по которым будет проходить фильтрация
 		let typesList = new Set();
+		console.log(this.getProjectsData);
 		this.getProjectsData.forEach((data) => { // добавляем список "типов проектов для фильтрации
 			typesList.add(data.type);
 		});  
