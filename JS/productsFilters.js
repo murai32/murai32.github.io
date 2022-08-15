@@ -154,7 +154,6 @@ class FilterByType extends Filter {
 	/*ДОБАВЛЕНИЕ ОБРАБОТЧИКОВ СОБЫТИЙ ЭЛЕМЕНТАМ ФИЛЬТРА ПО ТИПУ ОБЪЕКТА*/
 
 	setEventListeners (container){
-		console.dir(this);
 		container.querySelector('.FilterByType-ChipsBlock').addEventListener("click", function(event){
 
 			let elem = event.target;
@@ -165,9 +164,7 @@ class FilterByType extends Filter {
 			}
 
 			// Отправляем данные в функцию которая будет манипулировать с блоком карточек объектов
-			// console.log(typeof this.filterProjectsBlockByType()); 
-			console.dir(this);
-			// this.filterProjectsBlockByType(elem.getAttribute("data-filter-option")); 
+			this.filterProjectsBlockByType(elem.getAttribute("data-filter-option")); 
 
 			// Тут надо дать команду на установку класса-модификатара - active для элмента на который кликнули 
 			// и удаления этого класса модификатора с того элемента где он стоял
@@ -179,6 +176,7 @@ class FilterByType extends Filter {
 
 	constructor(){
 		super(); //Вызываем родительский конструктор
+		this.self = this;
 
 		this.filterControls = this.createFilterStructure (this.createFilterTypesList ()); // 1.) Создаем список уникальных параметров фильтрации 2.) Создаем контрол, который далее вставим в нужный узел
 
