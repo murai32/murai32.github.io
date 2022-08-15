@@ -82,7 +82,6 @@ static gatherAllProjectIntoOneBlock (data){
 
 		/*МАНИПУЛЯЦИИ С БЛОКОМ ПРОЕКТЫ*/
 		Filter.setProjectDate(Filter.getProjectsData()); // Убираем передваемою в подзаголовок информацию, вставляя туда дату проекта
-
 		console.warn("productsFilters.js подключен через github pages (https://murai32.github.io)");
 	}
 }
@@ -151,16 +150,16 @@ class FilterByType extends Filter {
 	/*ДОБАВЛЕНИЕ ОБРАБОТЧИКОВ СОБЫТИЙ ЭЛЕМЕНТАМ ФИЛЬТРА ПО ТИПУ ОБЪЕКТА*/
 
 	setEventListeners (container){
-		console.log(this);
-		
-		let that = this;
-		container.querySelector('.FilterByType-ChipsBlock').addEventListener("click", function(event){
 
-			/*ОПИСАНИЕ ПРОБЛЕМЫ*/
+		let that = this; // читай о проблеме
+
+		/*ОПИСАНИЕ ПРОБЛЕМЫ*/
 			/*Потерян контекст. Значение this не является ссылка на текущий экземпляр класса. 
 			А ссылается на текущий элемент container.querySelector('.FilterByType-ChipsBlock')
 			Необходимо пробросить this внутрь этой функции*/
-			/*КОНЕЦ ОПИСАНИЯ*/
+		/*КОНЕЦ ОПИСАНИЯ*/
+
+		container.querySelector('.FilterByType-ChipsBlock').addEventListener("click", function(event){
 
 			let elem = event.target;
 			if (!event.target.matches(".FilterByType-ChoiceChip a")){ 
@@ -171,7 +170,6 @@ class FilterByType extends Filter {
 
 			// Отправляем данные в функцию которая будет манипулировать с блоком карточек объектов
 			that.filterProjectsBlockByType(elem.getAttribute("data-filter-option")); 
-
 			// Тут надо дать команду на установку класса-модификатара - active для элмента на который кликнули 
 			// и удаления этого класса модификатора с того элемента где он стоял
 			FilterByType.filterBlock.querySelector('.FilterByType-ChoiceChip_active').classList.remove('FilterByType-ChoiceChip_active');
@@ -181,19 +179,17 @@ class FilterByType extends Filter {
 	}
 
 	constructor(){
-		super(); //Вызываем родительский конструктор
-
+		super(); //Вызываем родительский конструктор для инициализации фильтра, а также доступа к свойствам и методам родителя
 		this.filterControls = this.createFilterStructure (this.createFilterTypesList ()); // 1.) Создаем список уникальных параметров фильтрации 2.) Создаем контрол, который далее вставим в нужный узел
-
 		FilterByType.filterBlock.querySelector(".FiltersContainer").appendChild(this.filterControls); // Добавляем варианты филльтрации в фильтра по (виду проекта)
-
 		this.setEventListeners(this.filterControls); // Инициализируем обработчик событий для фильтров по типу объекта
-
-
 	}
 }
 
-let filterByType;
+
+
+
+let filterByType; // выносим переменную в глобальные для предоставления возможности работы с API проектов, фильтров на этой странице
 
 document.addEventListener("DOMContentLoaded", function(event) {
 
