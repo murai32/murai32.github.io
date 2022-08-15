@@ -94,6 +94,11 @@ static gatherAllProjectIntoOneBlock (data){
 
 class FilterByType extends Filter {
 
+
+	sayHi(){
+		alert('Привет');
+	}
+
 	/*СОЗДАЕМ СПИСОК С УНИКАЛЬНЫМИ ПАРМЕТРАМИ ФИЛЬТРАЦИИ (ПО ТИПУ ОБЪЕКТА)*/
 
 	createFilterTypesList () {	
@@ -154,6 +159,7 @@ class FilterByType extends Filter {
 	/*ДОБАВЛЕНИЕ ОБРАБОТЧИКОВ СОБЫТИЙ ЭЛЕМЕНТАМ ФИЛЬТРА ПО ТИПУ ОБЪЕКТА*/
 
 	setEventListeners (container){
+		sayHi();
 		container.querySelector('.FilterByType-ChipsBlock').addEventListener("click", function(event){
 
 			let elem = event.target;
