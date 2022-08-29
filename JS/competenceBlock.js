@@ -59,4 +59,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
     restructCompetenceBlock();//Оборачиваем элементы компетенцимй в <a>
 
-})    
+});
