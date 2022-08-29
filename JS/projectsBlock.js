@@ -83,7 +83,7 @@ function placeAwardRibon(){
 /* ИНИЦИИРУЕМ ВСЕ НЕОБХОДИМЫЕ СКРИПТЫ. Инициация должна находиться в самом низу*/
 document.addEventListener("DOMContentLoaded", function(event) {
     
-    // projectsBlockChangeGrid();// Заужаем сетку блока Last-projects-block для вертикального заголовка блока    
+    projectsBlockChangeGrid();// Заужаем сетку блока Last-projects-block для вертикального заголовка блока    
     // projectsBlockImgWrap();// Оборачиваем изображения блока Last-projects-block
     // placeAwardRibon();// Помещаем ленточку awward на карточку Melon office
 
