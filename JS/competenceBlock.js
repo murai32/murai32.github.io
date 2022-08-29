@@ -22,7 +22,13 @@ function restructCompetenceBlock(){
 	for (let i = 1; i <= competenceNumber; i++){
 
 		let competenceElms = document.querySelectorAll(className+String(i));   // Создаем ссылки на все элементы группы
-		let thisLinkAtts = document.querySelector(className+String(i)+' > a').attributes; // Элемент <a> от которого будем брать все атрибуты для создания ссылки-обертки
+		try {
+			let thisLinkAtts = document.querySelector(className+String(i)+' > a').attributes; // Элемент <a> от которого будем брать все атрибуты для создания ссылки-обертки
+		} catch (err){
+			console.error('В блоке "Компетенции" для компетенции .${competenceElms} отсутсвует целевой URL');
+			break;
+		}
+
 		let newElmItem = document.createElement("a"); // создаем элемент ссылка-обертка
 		let ElmItemClasses = "competence-bl__linkWrapper"; // обязательные классы элемента ссылка-обертка
 		
