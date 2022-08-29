@@ -1,3 +1,64 @@
+let _projectsData;
+
+
+
+/*ПАРСИМ ИНФОРМАЦИЮ О ПРОЕКТОВ ИЗ БЛОКА "СЕТКА ОБЪЕКТОВ"*/
+
+function parseProjectsBlock (blockClass){
+    const projectsBlock = document.querySelector(blockClass); // ссылка на блок "проекты"
+    const projectsData = document.querySelectorAll(blockClass +' .t404__tag'); // массив с ссылками на все элементы содержащие строки, которые необходимо привести к JSON и добавить в projects
+    let projects = []; // Массив для хранения найденной информации парсером
+
+    projectsData.forEach((data) => {
+        //В этом цикле проводится проверка каждой возвращаемой сервером строки с data для каждого объект.
+        //Если при компиляции вылавливается ошибка, то возвращаетмя сообщение в консоль.
+        //Если формат данных корректен, то парсер приводит их в JSON объект, который далее добавляется в массив projects.
+
+        try {
+            let projectData = JSON.parse(data.innerText); // парсим данные по данному проекту
+            projectData.projectElm = data.closest('.t404__col');// каждому объекту необходимо дать ссылку на связанный с ним DOM Node (projectNode)
+            projects.push(projectData); // добавляем JSON объект в массив
+        } catch(err) {
+                console.error("Парсинг данных объекта не удался." + data.closest('.t404__col').querySelector('.t404__titel').innerText());
+                console.error("Проверь корректность возвращаемых данных из параметра 'Подзаголовок' в настройках страницы на которую ссылается данная карточка:\n" + data.closest('.t404__col').querySelector('.t404__tag').innerText());
+            console.error(err.name);
+            console.error(err.message);
+        }
+    });
+    return projects; 
+}
+
+
+
+/* ИТЕРФЕЙС ДЛЯ РАБОТЫ С JSON-ОМ "ВСЕ ПРОЕКТЫ" */
+
+// Интерфейс для получения и обновления JSON объекта с информацией о проектах
+function setProjectsData() {
+    if (!document.querySelector(".uc-l-projects-block").matches(".uc-l-projects-block")) throw new Error("На странице отсутсвует блок 'Последние проекты', либо ему не задан CSS-класс .uc-l-projects-block");
+    _projectsData = parseProjectsBlock(".uc-l-projects-block");
+}
+
+// Интерфейс возвращающий данные JSON "Все проекты"
+function getProjectsData() {
+    return _projectsData;
+}
+
+
+
+/*ДОБАВЛЕНИЕ ДАТЫ ПРОЕКТА ПОДЗАГОЛОВОК КАЖДОЙ КАРТОЧКИ ПРОЕКТА*/
+
+function setProjectDate (data){
+ // Заменяем информацию передаваемую в подзаголовок на "год" реализации этого проекта
+  data.forEach((project) => {
+    project.projectElm.querySelector('.t404__tag').innerText = project.year;
+    project.projectElm.setAttribute('data-filter-by-type', project.type);
+  });   
+}
+
+
+
+
+
 /*ДЕЙСТВИЯ С Last-projects-block*/
 
 
