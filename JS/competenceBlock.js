@@ -26,6 +26,7 @@ function restructCompetenceBlock(){
 			let thisLinkAtts = document.querySelector(className+String(i)+' > a').attributes; // Элемент <a> от которого будем брать все атрибуты для создания ссылки-обертки
 		} catch (err){
 			console.error('В блоке "Компетенции" для компетенции .${competenceElms} отсутсвует целевой URL');
+			console.error(err);
 			break;
 		}
 
