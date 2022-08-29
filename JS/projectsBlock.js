@@ -110,7 +110,7 @@ function placeAwardRibon(){
     
     // Ищем по тексту заголовка элемент в который будем вставлять ленточку
     let targetElm;
-    for (targetElm of document.querySelectorAll(".uc-l-projects-block a.t649__linkwrapper")) {
+    for (targetElm of document.querySelectorAll(".uc-l-projects-block a.t404__link")) {
         if (targetElm.textContent.includes("Melon")) {
             // Если TRUE, то обрываем цикл. А в targetElm остается ссылка на ссылку на необходимый элемент
             break;
@@ -127,7 +127,7 @@ function placeAwardRibon(){
     
     function setHeight(){
         // Задаем высоту элементу обертка ленточки премии (ribbonWrapper) равную изображению .projectItem-Image > div 
-        ribbonWrapper.style.height = document.querySelector('.projectItem-Image').offsetHeight+"px";
+        ribbonWrapper.style.height = document.querySelector('.t404__imgbox').offsetHeight+"px";
     };
     
     setHeight();
@@ -135,6 +135,7 @@ function placeAwardRibon(){
     targetElm.appendChild(ribbonWrapper);
     
     window.onresize = setHeight;
+
 
     
 }
