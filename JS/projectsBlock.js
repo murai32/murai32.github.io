@@ -146,10 +146,12 @@ function placeAwardRibon(){
 document.addEventListener("DOMContentLoaded", function(event) {
     
     projectsBlockChangeGrid();// Заужаем сетку блока Last-projects-block для вертикального заголовка блока    
-    // projectsBlockImgWrap();// Оборачиваем изображения блока Last-projects-block
-    // placeAwardRibon();// Помещаем ленточку awward на карточку Melon office
+    setProjectsData();//Парсим JSON
+    setProjectDate (getProjectsData());//Ставим даты на карточки проектов
 
-    setProjectsData();
-    setProjectDate (getProjectsData());
+    // projectsBlockImgWrap();// Оборачиваем изображения блока Last-projects-block
+    placeAwardRibon();// Помещаем ленточку awward на карточку Melon office
+
+    
 
 })    
