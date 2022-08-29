@@ -83,10 +83,11 @@ function restructCompetenceBlock(){
 	for (let i = 1; i <= competenceNumber; i++){
 
 		let competenceElms = document.querySelectorAll(className+String(i));   // Создаем ссылки на все элементы группы
+		let thisLinkAtts;
 		try {
-			let thisLinkAtts = document.querySelector(className+String(i)+' a').attributes; // Элемент <a> от которого будем брать все атрибуты для создания ссылки-обертки
+			thisLinkAtts = document.querySelector(className+String(i)+' a').attributes; // Элемент <a> от которого будем брать все атрибуты для создания ссылки-обертки
 		} catch (err){
-			console.error('В блоке "Компетенции" для компетенции .${competenceElms} отсутсвует целевой URL');
+			console.error('В блоке "Компетенции" для компетенции .competenceElms отсутсвует целевой URL');
 			console.error(err);
 			break;
 		}
