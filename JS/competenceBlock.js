@@ -116,7 +116,7 @@ function restructCompetenceBlock(){
 	}
 }
 
-restructCompetenceBlock();//Оборачиваем элементы компетенцимй в <a>
+
 /* ИНИЦИИРУЕМ ВСЕ НЕОБХОДИМЫЕ СКРИПТЫ. Инициация должна находиться в самом низу*/
 document.addEventListener("DOMContentLoaded", function(event) {    
     
