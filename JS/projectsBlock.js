@@ -148,4 +148,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // projectsBlockImgWrap();// Оборачиваем изображения блока Last-projects-block
     // placeAwardRibon();// Помещаем ленточку awward на карточку Melon office
 
+    setProjectsData();
+    setProjectDate (getProjectsData());
+
 })    
