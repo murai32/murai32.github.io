@@ -34,6 +34,7 @@ function restructCompetenceBlock(){
 		let ElmItemClasses = "competence-bl__linkWrapper"; // обязательные классы элемента ссылка-обертка
 		
 		/*  РАБОТАЕМ С АТРИБУТАМИ ССЫЛКИ-ОБЕРТКИ    */
+		newElmItem.setAttribute( "class", ElmItemClasses); // добавляем обязательные классы
 		for (let b = 0; b < thisLinkAtts.length; b++) {
 		  //  добавляем эменту ссылка-обертка все обязательные атрибуты и атрибуты прородителя 
 		    if (thisLinkAtts[b].name === "class") {
