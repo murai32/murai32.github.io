@@ -5,17 +5,14 @@ Font families defined by this CSS:
 /* ----------------------- Inter CDN ----------------------- */
 /*https://github.com/rsms/inter*/
 
-@import url('https://rsms.me/inter/inter.css');
 
-html {
+@font-face {
     font-family: 'Inter', sans-serif;
+    font-style: oblique 0deg 10deg;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url(https://rsms.me/interfont-files/Inter.var.woff2?v=3.19) format('woff2');
 }
-
-/*@supports (font-variation-settings: normal) {
-    html {
-        font-family: 'Inter var', sans-serif;
-    }
-}*/
 
 
 
