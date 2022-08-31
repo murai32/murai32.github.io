@@ -12,7 +12,7 @@ https://github.com/rsms/inter*/
     font-display: swap;
     font-style: normal;
     font-named-instance: 'Regular';
-    src: url("/Assets/Font-files/Inter-roman.var.woff2?v=3.19") format("woff2");
+    src: url("https://murai32.github.io/Assets/Font-files/Inter-roman.var.woff2?v=3.19") format("woff2");
     -webkit-font-feature-settings: "case" 0, "cpsp" 0, "dlig" 0, "frac" 0, "dnom" 0, "numr" 0, "salt" 0, "subs" 0, "sups" 0, "tnum", "zero", "ss01", "ss02" 0, "ss03", "ss04", "cv01", "cv02", "cv03", "cv04", "cv05", "cv06", "cv07" 0, "cv08" 0, "cv09" 0, "cv10", "cv11" 0, "calt", "ccmp", "kern";
             font-feature-settings: "case" 0, "cpsp" 0, "dlig" 0, "frac" 0, "dnom" 0, "numr" 0, "salt" 0, "subs" 0, "sups" 0, "tnum", "zero", "ss01", "ss02" 0, "ss03", "ss04", "cv01", "cv02", "cv03", "cv04", "cv05", "cv06", "cv07" 0, "cv08" 0, "cv09" 0, "cv10", "cv11" 0, "calt", "ccmp", "kern";
 }
@@ -23,7 +23,7 @@ https://github.com/rsms/inter*/
     font-display: swap;
     font-style: italic;
     font-named-instance: 'Italic';
-    src: url("/Assets/Font-files/Inter-italic.var.woff2?v=3.19") format("woff2");
+    src: url("https://murai32.github.io/Assets/Font-files/Inter-italic.var.woff2?v=3.19") format("woff2");
     -webkit-font-feature-settings: "case" 0, "cpsp" 0, "dlig" 0, "frac" 0, "dnom" 0, "numr" 0, "salt" 0, "subs" 0, "sups" 0, "tnum", "zero", "ss01", "ss02" 0, "ss03", "ss04", "cv01", "cv02", "cv03", "cv04", "cv05", "cv06", "cv07" 0, "cv08" 0, "cv09" 0, "cv10", "cv11" 0, "calt", "ccmp", "kern";
             font-feature-settings: "case" 0, "cpsp" 0, "dlig" 0, "frac" 0, "dnom" 0, "numr" 0, "salt" 0, "subs" 0, "sups" 0, "tnum", "zero", "ss01", "ss02" 0, "ss03", "ss04", "cv01", "cv02", "cv03", "cv04", "cv05", "cv06", "cv07" 0, "cv08" 0, "cv09" 0, "cv10", "cv11" 0, "calt", "ccmp", "kern";
 }
