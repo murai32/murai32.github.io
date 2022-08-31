@@ -2,20 +2,6 @@
 Font families defined by this CSS:
 
 
-/* ----------------------- Inter CDN ----------------------- */
-/*https://github.com/rsms/inter*/
-
-
-@font-face {
-    font-family: 'Inter', sans-serif;
-    font-style: oblique 0deg 10deg;
-    font-weight: 100 900;
-    font-display: swap;
-    src: url(https://rsms.me/interfont-files/Inter.var.woff2?v=3.19) format('woff2');
-}
-
-
-
 
 /* ----------- PT Mono -----------
 
