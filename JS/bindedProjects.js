@@ -21,7 +21,7 @@ function parseBindedProjectsBlock(blockClass){
         //Если формат данных корректен, то парсер приводит их в JSON объект, который далее добавляется в массив projects.
 
         try {
-        	data.style.textTransform = "none";
+        	data.style.textTransform = "none"; // Добавляем свойство, что бы избежать ошибок при парсинге
             let projectData = JSON.parse(data.innerText); // парсим данные по данному проекту
             projectData.projectElm = data.closest('.t-carousel__item '); // каждому объекту необходимо дать ссылку на связанный с ним DOM Node (слайд)
             projects.push(projectData); // добавляем JSON объект в массив
