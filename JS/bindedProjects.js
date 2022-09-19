@@ -49,9 +49,18 @@ function setProjectDate(data) {
 
 
 
+/*ПРЯЧЕМ КОНТРОЛЫ СЛАЙДЕРА*/
+function hideCarouselControls (){
+	if (getBindedProjectsData().length > 1){
+		querySelector(".uc-binded-project .t-carousel__indicators").style.display = "none";
+		querySelectorAll(".uc-binded-project .t-carousel__control").style.display = "none";
+	}
+};
+
 /*ИНИЦИАЛИЗАЦИЯ*/
 
 document.addEventListener("DOMContentLoaded", function(event) {
-	parseBindedProjectsBlock(".uc-binded-project");
-	setProjectDate(getBindedProjectsData());
+	parseBindedProjectsBlock(".uc-binded-project"); // парсим информацию о проекте
+	setProjectDate(getBindedProjectsData()); // устанавливаем дату взамен возвражаемой информации в подзаголовок
+	hideCarouselControls(); // Прячем контролллы по условию
 })
