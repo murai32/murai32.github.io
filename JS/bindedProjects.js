@@ -7,7 +7,7 @@ function getBindedProjectsData(){
 
 let _projectsBlock; // ссылка на блок "связанные проекты"
 function getProjectsBlock(){
-	return _getProjectsBlock;
+	return _projectsBlock;
 }
 
 
