@@ -57,7 +57,9 @@ function setProjectDate(data) {
 function hideCarouselControls(){
 	if (getBindedProjectsData().length < 1){
 		getProjectsBlock().querySelector(".uc-binded-project .t-carousel__indicators").style.display = "none";
-		getProjectsBlock().querySelectorAll(".uc-binded-project .t-carousel__control").style.display = "none";
+		getProjectsBlock().querySelectorAll(".uc-binded-project .t-carousel__control").forEach((control) => {
+			control.style.display = "none";
+		});
 	}
 };
 
