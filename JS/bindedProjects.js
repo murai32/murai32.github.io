@@ -50,7 +50,7 @@ function setProjectDate(data) {
 
 
 /*ПРЯЧЕМ КОНТРОЛЫ СЛАЙДЕРА*/
-function hideCarouselControls (){
+function hideCarouselControls(){
 	if (getBindedProjectsData().length > 1){
 		querySelector(".uc-binded-project .t-carousel__indicators").style.display = "none";
 		querySelectorAll(".uc-binded-project .t-carousel__control").style.display = "none";
