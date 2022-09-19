@@ -2,16 +2,20 @@
 
 let _bindedProjectsData; // сюда будем записывать JSON
 function getBindedProjectsData(){
-	return _bindedProjectsData
+	return _bindedProjectsData;
 }
 
+let _projectsBlock; // ссылка на блок "связанные проекты"
+function getProjectsBlock(){
+	return _getProjectsBlock;
+}
 
 
 /*ПАРСИМ ИНФОРМАЦИЮ О ПРОЕКТАХ ИЗ БЛОКА "СВЯЗАННЫЕ ПРОЕКТЫ"*/
 
 function parseBindedProjectsBlock(blockClass){
-	let projectsBlock = document.querySelector(blockClass); // ссылка на блок "связанные проекты"
-	let projectsData = document.querySelectorAll(blockClass + ' .t-uptitle'); // массив с ссылками на все элементы содержащие строки, которые необходимо привести к JSON и добавить в projects
+	_projectsBlock = document.querySelector(blockClass); // ссылка на блок "связанные проекты"
+	let projectsData = getProjectsBlock().querySelectorAll(blockClass + ' .t-uptitle'); // массив с ссылками на все элементы содержащие строки, которые необходимо привести к JSON и добавить в projects
     let projects = []; // Массив для хранения найденной информации парсером
 
 
@@ -51,9 +55,9 @@ function setProjectDate(data) {
 
 /*ПРЯЧЕМ КОНТРОЛЫ СЛАЙДЕРА*/
 function hideCarouselControls(){
-	if (getBindedProjectsData().length > 1){
-		querySelector(".uc-binded-project .t-carousel__indicators").style.display = "none";
-		querySelectorAll(".uc-binded-project .t-carousel__control").style.display = "none";
+	if (getBindedProjectsData().length < 1){
+		getProjectsBlock().querySelector(".uc-binded-project .t-carousel__indicators").style.display = "none";
+		getProjectsBlock().querySelectorAll(".uc-binded-project .t-carousel__control").style.display = "none";
 	}
 };
 
