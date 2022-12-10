@@ -29,7 +29,7 @@ function initCustomCursor() {
 
     /*Требует подключения библиотеки!
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js">*/
-    if (!isMobile()) {
+    if (!isMobile) {
         let cursor = document.createElement('div');
         cursor.classList.add("custom-cursor");
         cursor.style.cssText = 'left: 1392px; top: 102px; opacity: 0;';
