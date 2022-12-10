@@ -1,3 +1,28 @@
+/*СЕРВИСНЫЕ ФУНКЦИИ*/
+
+/*Тест на тип устройства*/
+function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+};
+
+
+/*Тест на корневую страницу*/
+function isRootPage() {
+    if (location.pathname == "/") {
+        return true;
+    }
+};
+
+
+/*Тест на наличие узла на странице*/
+function isInPage(node) {
+    return (node === document.body) ? false : document.body.contains(node);
+};
+
+
+
+/*ФУНКЦИИ*/
+
 /*Логика работы инверсионноо курсора*/
 
 function initCustomCursor() {
@@ -272,28 +297,6 @@ function wrapMainMenuCloseBtn() {
         console.error('Элементы класса .t-menuburger в DOM не определены');
     }
 }
-
-/*СЕРВИСНЫЕ ФУНКЦИИ*/
-
-
-/*Тест на тип устройства*/
-function isMobile() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-};
-
-
-/*Тест на корневую страницу*/
-function isRootPage() {
-    if (location.pathname == "/") {
-        return true;
-    }
-};
-
-
-/*Тест на наличие узла на странице*/
-function isInPage(node) {
-    return (node === document.body) ? false : document.body.contains(node);
-};
 
 
 
