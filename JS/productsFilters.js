@@ -120,10 +120,19 @@ class FilterByType extends Filter {
 
     /*СОРТИРУЕМ СПИСОК*/
     sortFilterTypesList(list){
+
+        /*ВНИМАНИЕ! решение с findIndex костыльное, не подходит для множества сортируемых типов объектов*/
+
         let typesList = Array.from(list); // Приводим объект типа Set к Array
 
-        if (typesList.findIndex("Жилье") != -1){
-            typesList.splice(typesList.findIndex("Жилье"),1); // Удаляем "Жилье" из массива
+        function isWantedValue(element, index, array) {
+          const typeValue = 'Жилье'
+          return element === typeValue
+        }
+
+
+        if (typesList.findIndex(isWantedValue) != -1){
+            typesList.splice(typesList.findIndex(isWantedValue),1); // Удаляем "Жилье" из массива
             return typesList.splice(0, 0, "Жилье"); // Добавляем Жилье на нужную позицию
         } else {
             return list;
