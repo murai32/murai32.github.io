@@ -113,7 +113,7 @@ class FilterByType extends Filter {
         FilterByType.getProjectsData().forEach((data) => { // добавляем список "типов проектов для фильтрации
             typesList.add(data.type);
         });
-        return sortFilterTypesList(typesList); // Возвращем список отсортированных уникальных параметров
+        return this.sortFilterTypesList(typesList); // Возвращем список отсортированных уникальных параметров
     }
 
 
