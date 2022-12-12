@@ -127,13 +127,12 @@ class FilterByType extends Filter {
 
         function isWantedValue(element, index, array) {
           const typeValue = 'Жилье';
-
-          console.log("callback function isWantedValue");
           return element === typeValue;
         }
 
 
         if (typesList.findIndex(isWantedValue) != -1){
+            console.log(typesList);
             typesList.splice(typesList.findIndex(isWantedValue),1); // Удаляем "Жилье" из массива
 
             console.log(typesList);
