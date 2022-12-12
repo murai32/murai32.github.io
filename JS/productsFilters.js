@@ -68,8 +68,23 @@ class Filter {
         /*!!! функция не реализованна */
         let container;
 
-        data.forEach((project) => {
-            project.projectElm // ссылка на элемент
+       
+
+        /*
+            1. Получить ссылку на первый контейнер (".t-container")
+            2. Каждый элемент если он не находится в первом контейнере должен быть перенесен в первый контейнер
+            3. Удалить все элменты, которые sibilings элементу (".t-container")
+        */
+
+        data.forEach((project, index) => {
+            index == 0 ? container = project.projectElm.parentNode; // Получаем ссылку на первый контейнер (".t-container") в который будем добавлять карточки объектов
+                
+            container != project.projectElm.parentNode ? container.appendChild(project.projectElm); // Переносим карточки объектов в первыйконтейнер если их там пока нет
+
+                
+
+
+
         });
     }
 
@@ -83,6 +98,9 @@ class Filter {
 
         /*МАНИПУЛЯЦИИ С БЛОКОМ ПРОЕКТЫ*/
         Filter.setProjectDate(Filter.getProjectsData()); // Убираем передваемою в подзаголовок информацию, вставляя туда дату проекта
+
+        Filter.gatherAllProjectIntoOneBlock(Filter.getProjectsData()); // Собираем все карточки объектов в один блок
+
         console.warn("productsFilters.js подключен через github pages (https://murai32.github.io)");
     }
 }
