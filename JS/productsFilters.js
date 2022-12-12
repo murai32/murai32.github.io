@@ -125,7 +125,9 @@ class FilterByType extends Filter {
         if (typesList.findIndex("Жилье") != -1){
             typesList.splice(typesList.findIndex("Жилье"),1); // Удаляем "Жилье" из массива
             return typesList.splice(0, 0, "Жилье"); // Добавляем Жилье на нужную позицию
-        }        
+        } else {
+            return list;
+        }    
     }
 
 
