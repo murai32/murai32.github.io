@@ -126,10 +126,10 @@ class FilterByType extends Filter {
         let typesList = Array.from(list); // Приводим объект типа Set к Array
 
         function isWantedValue(element, index, array) {
-          const typeValue = 'Жилье'
-          return element === typeValue
+          const typeValue = 'Жилье';
 
           console.log("callback function isWantedValue");
+          return element === typeValue;
         }
 
 
