@@ -77,13 +77,12 @@ class Filter {
         */
 
         data.forEach((project, index) => {
-            index == 0 ? container = project.projectElm.parentNode; // Получаем ссылку на первый контейнер (".t-container") в который будем добавлять карточки объектов
-                
-            container != project.projectElm.parentNode ? container.appendChild(project.projectElm); // Переносим карточки объектов в первыйконтейнер если их там пока нет
-
-                
-
-
+            if (index == 0){
+                container = project.projectElm.parentNode; // Получаем ссылку на первый контейнер (".t-container") в который будем добавлять карточки объектов
+            }
+            if (container != project.projectElm.parentNode){
+                container.appendChild(project.projectElm); // Переносим карточки объектов в первыйконтейнер если их там пока нет
+            }
 
         });
     }
