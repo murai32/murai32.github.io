@@ -65,16 +65,7 @@ class Filter {
 
     static gatherAllProjectIntoOneBlock(data) {
 
-        /*!!! функция не реализованна */
         let container;
-
-       
-
-        /*
-            1. Получить ссылку на первый контейнер (".t-container")
-            2. Каждый элемент если он не находится в первом контейнере должен быть перенесен в первый контейнер
-            3. Удалить все элменты, которые sibilings элементу (".t-container")
-        */
 
         data.forEach((project, index) => {
             let itemParent = project.projectElm.parentNode; // Ссылка на контейнер этой карточки объекта
@@ -104,7 +95,6 @@ class Filter {
 
         /*МАНИПУЛЯЦИИ С БЛОКОМ ПРОЕКТЫ*/
         Filter.setProjectDate(Filter.getProjectsData()); // Убираем передваемою в подзаголовок информацию, вставляя туда дату проекта
-
         Filter.gatherAllProjectIntoOneBlock(Filter.getProjectsData()); // Собираем все карточки объектов в один блок
 
         console.warn("productsFilters.js подключен через github pages (https://murai32.github.io)");
@@ -123,7 +113,19 @@ class FilterByType extends Filter {
         FilterByType.getProjectsData().forEach((data) => { // добавляем список "типов проектов для фильтрации
             typesList.add(data.type);
         });
-        return typesList; // Возвращем список уникальных параметров
+        return sortFilterTypesList(typesList); // Возвращем список отсортированных уникальных параметров
+    }
+
+
+
+    /*СОРТИРУЕМ СПИСОК*/
+    sortFilterTypesList(list){
+        let typesList = Array.from(list); // Приводим объект типа Set к Array
+
+        if (typesList.findIndex("Жилье") != -1){
+            typesList.splice(typesList.findIndex("Жилье"),1); // Удаляем "Жилье" из массива
+            return typesList.splice(0, 0, "Жилье"); // Добавляем Жилье на нужную позицию
+        }        
     }
 
 
