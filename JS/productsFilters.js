@@ -128,6 +128,8 @@ class FilterByType extends Filter {
         function isWantedValue(element, index, array) {
           const typeValue = 'Жилье'
           return element === typeValue
+
+          console.log("callback function isWantedValue");
         }
 
 
