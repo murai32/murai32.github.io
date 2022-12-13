@@ -130,7 +130,6 @@ class FilterByType extends Filter {
           return element === typeValue;
         }
 
-
         if (typesList.findIndex(isWantedValue) != -1){
             console.log(typesList);
             typesList.splice(typesList.findIndex(isWantedValue),1); // Удаляем "Жилье" из массива
