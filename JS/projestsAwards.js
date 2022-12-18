@@ -25,16 +25,16 @@ function placeAwardRibon() {
 
     function setHeight() {
 
-        for (let wrappers of document.querySelector('.t404__imgbox')) {
+        for (let wrappers of document.querySelectorAll('.t404__imgbox')) {
             //Обходим массив целевых элементов у которых можно взять искомую высоту, с целью найти те которые показываются на экране
             if (wrappers.clientHeight != 0){
                 // Задаем высоту элементу обертка ленточки премии (ribbonWrapper) равную изображению .projectItem-Image > div 
-                ribbonWrapper.style.height = document.querySelector('.t404__imgbox').clientHeight + "px";                
-                console.log('Задаем высоту блока обертки ленточки ' + document.querySelector('.t404__imgbox').offsetHeight + "px");
+                ribbonWrapper.style.height = wrappers.clientHeight + "px";                
+                console.log('Задаем высоту блока обертки ленточки ' + wrappers.clientHeight + "px");
         
                 break;
             }
-            console.log(document.querySelector('.t404__imgbox').clientHeight);
+            console.log(wrappers.clientHeight);
         }
     };
 
