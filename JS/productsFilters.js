@@ -131,10 +131,7 @@ class FilterByType extends Filter {
         }
 
         if (typesList.findIndex(isWantedValue) != -1){
-            console.log(typesList);
             typesList.splice(typesList.findIndex(isWantedValue),1); // Удаляем "Жилье" из массива
-
-            console.log(typesList.splice(0, 0, "Жилье"));
             return typesList; // Добавляем Жилье на нужную позицию
         } else {
             return list;
