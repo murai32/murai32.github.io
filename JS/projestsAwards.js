@@ -24,15 +24,18 @@ function placeAwardRibon() {
     ribbonImg.setAttribute('src', 'https://gist.githubusercontent.com/murai32/24b54e76db904cc20e0f9f5d8f57c783/raw/8cf84daeb350986066aa3790fd03bf8aa22c2f2a/logo_boa_LAUREAT_2020_f-02-B.svg');
 
     function setHeight() {
-        // Задаем высоту элементу обертка ленточки премии (ribbonWrapper) равную изображению .projectItem-Image > div 
-        ribbonWrapper.style.height = document.querySelector('.t404__imgbox').offsetHeight + "px";
-        console.log(isInPage(document.querySelector('.t404__imgbox')));
-        console.log(document.querySelector('.t404__imgbox').clientHeight);
-        console.log(document.querySelector('.t404__imgbox'));
-        console.log(document.querySelector('.t404__imgbox').clientHeight);
 
-        console.log('Задаем высоту блока обертки ленточки ' + document.querySelector('.t404__imgbox').offsetHeight + "px");
+        for (let wrappers of document.querySelector('.t404__imgbox')) {
+            //Обходим массив целевых элементов у которых можно взять искомую высоту, с целью найти те которые показываются на экране
+            if (wrappers.clientHeight != 0){
+                // Задаем высоту элементу обертка ленточки премии (ribbonWrapper) равную изображению .projectItem-Image > div 
+                ribbonWrapper.style.height = document.querySelector('.t404__imgbox').clientHeight + "px";                
+                console.log('Задаем высоту блока обертки ленточки ' + document.querySelector('.t404__imgbox').offsetHeight + "px");
         
+                break;
+            }
+            console.log(document.querySelector('.t404__imgbox').clientHeight);
+        }
     };
 
     setHeight();
