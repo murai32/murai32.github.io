@@ -29,21 +29,16 @@ function placeAwardRibon() {
             //Обходим массив целевых элементов у которых можно взять искомую высоту, с целью найти те которые показываются на экране
             if (wrappers.clientHeight != 0){
                 // Задаем высоту элементу обертка ленточки премии (ribbonWrapper) равную изображению .projectItem-Image > div 
-                ribbonWrapper.style.height = wrappers.clientHeight + "px";                
-                console.log('Задаем высоту блока обертки ленточки ' + wrappers.clientHeight + "px");
-        
+                ribbonWrapper.style.height = wrappers.clientHeight + "px";       
                 break;
             }
-            console.log(wrappers.clientHeight);
         }
     };
 
     setHeight();
     ribbonWrapper.appendChild(ribbonImg);
     targetElm.appendChild(ribbonWrapper);
-
     window.onresize = setHeight;
-
 }
 
 
