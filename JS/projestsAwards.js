@@ -27,6 +27,7 @@ function placeAwardRibon() {
         // Задаем высоту элементу обертка ленточки премии (ribbonWrapper) равную изображению .projectItem-Image > div 
         ribbonWrapper.style.height = document.querySelector('.t404__imgbox').offsetHeight + "px";
         console.log(isInPage(document.querySelector('.t404__imgbox')));
+        console.log(document.querySelector('.t404__imgbox').clientHeight);
         console.log('Задаем высоту блока обертки ленточки ' + document.querySelector('.t404__imgbox').offsetHeight + "px");
         
     };
