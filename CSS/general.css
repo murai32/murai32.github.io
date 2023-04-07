@@ -1,0 +1,823 @@
+/*ГЛОБАЛЬНЫЕ СТИЛИ (общие настройки)*/
+
+/*Подключение вариативного шрифта*/
+/*@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif !important;}*/
+/*@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}*/
+
+
+/*Переменные*/
+:root {
+    /*Цвета*/
+    --main-red-color: #ee6b62;
+    --main-dark-color: #1a2024;
+    --main-green-color:#7adb8b;
+    font-feature-settings: "case" 0, "cpsp" 0, "dlig" 0, "frac" 0, "dnom" 0, "numr" 0, "salt" 0, "subs" 0, "sups" 0, "tnum" 0, "zero", "ss01", "ss02" 0, "ss03", "ss04", "cv01", "cv02", "cv03", "cv04", "cv05", "cv06", "cv07" 0, "cv08" 0, "cv09" 0, "cv10", "cv11" 0, "calt", "ccmp", "kern";
+
+    /*Анимации*/
+    --link-transition: all .35s ease-in-out 0s  !important;
+}
+
+/*Выделение текста*/
+::-moz-selection {
+    color: #fff;
+    background: var(--main-green-color);
+}
+::selection {
+    color: #fff;
+    background: var(--main-green-color);
+}
+
+/*Глобальные стили*/
+body {
+
+}
+
+@media screen and (max-width: 980px){
+    h1 {
+        
+    }
+    h2 {
+        font-size: 32px !important;
+    }
+    h3 {
+        
+    }
+}
+
+
+.link a , .link_background_dark a, .link_background_red a{
+    transition: all .35s ease-in-out 0s  !important;
+}
+
+.link_background_red a{
+    color: #fff !important;
+}
+
+.link a:hover {
+    color: var(--main-red-color) !important;
+    transition: all .35s ease-in-out 0s  !important;
+}
+
+.link_background_dark a:hover {
+    color: #fff !important;
+    transition: all .35s ease-in-out 0s  !important;
+}
+
+.link_background_red a:hover {
+    color: var(--main-dark-color) !important;
+    transition: all .35s ease-in-out 0s  !important;
+}
+
+
+/*!! Нижезакомментированные стили подключатся на странице глобального хедера. Костыль из-за Тильдовских особенностей (курсор пропадает в визуальном редакторе тильды).*/
+/*СТИЛИ ГЛОБАЛЬНОГО ХЕДЕРА*/
+
+/* Кастомный курсор */
+/** {
+    cursor: none;
+}
+
+.custom-cursor {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: transform 350ms ease;
+    transform: translate(-50%, -50%) scale(.1);
+    z-index: 9999999999;
+    -webkit-backdrop-filter: invert(1);
+            backdrop-filter: invert(1);
+}
+
+.custom-cursor--link {
+    transform: translate(-50%, -50%) scale(.3);
+}
+
+.custom-cursor--zoom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%) scale(.3);
+    mix-blend-mode: normal;
+    background-color:initial;
+}
+
+.custom-cursor__Background{
+    position:absolute;
+    background-color: white;
+    height:100%;
+    width:100%;
+    border-radius: 50%;
+    background-color: var(--main-dark-color);
+}
+
+.custom-cursor--zoom > svg {
+    fill: white;
+    transform: scale(4);
+    mix-blend-mode: unset;
+}*/
+
+/* Конец кастомного курсора */
+
+/*.block {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80vh;
+    min-height: 300px;
+}
+.block--black {
+    background-color: black;
+    color: white;
+}
+.block--white {
+    background-color: white;
+    color: black;
+}
+.block__title,
+.block__link {
+    color: currentColor;
+}
+.block__title {
+    margin-bottom: 1em;
+    font-size: 4rem;
+    font-weight: 300;
+    text-align: center;
+}
+.block__link {
+    padding: .5em;
+    text-decoration: none;
+    transition: letter-spacing 200ms ease;
+}
+.block__link:hover {
+    letter-spacing: .1em;
+}
+
+
+.header-menu-URL a, .Header-MainMenuWrapper div, .Header-MainMenuWrapper path{
+    transition: all 0.25s ease-in-out 0s;
+    color: var(--main-dark-color) !important;
+    fill: var(--main-dark-color) !important;
+}
+
+.header-menu-URL a:hover, .Header-MainMenuWrapper:hover div, .Header-MainMenuWrapper:hover path{
+    transition: all 0.25s ease-in-out 0s;
+    color: var(--main-red-color) !important;
+    fill: var(--main-red-color) !important;
+}*/
+
+/*КОНЕЦ СТИЛИ ГЛОБАЛЬНОГО ХЕДЕРА*/
+
+.uc-header_Pattern{
+    visibility: hidden !important;
+}
+
+.uc-header_Pattern_visible{
+    visibility: visible;
+}
+
+/*Главное меню*/
+
+#rec467412673 .t280_hidden .t280__burger{
+    display: none;
+}
+
+#rec467412673 .t280__menu__container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#rec467412673 .t280__menu {
+    padding-left: 5%;
+    transform: initial;
+    top: initial;
+}
+
+#rec467412673 .t280__list {
+    text-align: left;
+}
+
+#rec467412673 .t280__menu__link{
+    transition: var(--link-transition) !important;
+}
+
+#rec467412673 .t280__menu__link:hover{
+    font-size: 40px !important;
+    transition: var(--link-transition) !important;
+}
+
+#rec467412673 .t280__menu__link.t-active{
+     font-size: 40px !important;   
+}
+
+#rec467412673 .t280_hidden{
+    display:none;
+}
+
+#rec467412673 .t280__burger{
+    height:40px !important;
+    width: 40px !important;
+    cursor: none;
+    /*margin: 70px 40px 0 0 !important;*/
+    padding-top:20px;
+}
+
+#rec467412673 .t280__burger a{
+    display: block;
+    height: inherit;
+}
+#rec467412673 .t280__burger a svg{
+    transition: all 0.45s ease-in-out !important;
+}
+#rec467412673 .t280__burger a svg:hover{
+    transform: rotate(90deg);
+    transition: all 0.45s ease-in-out !important;
+}
+
+/*
+.t280__menu__item.t-menu__link-item{
+    transition: all 0.3s ease-in-out !important;
+    line-height: 1.57 !important;
+    font-family: 'PT Mono' !important;
+    text-align: left !important;
+    margin-left: 20% !important;
+}
+
+.t280__menu__item.t-menu__link-item.t-active {
+        font-size: 60px !important;    
+}
+
+.t280__menu__item.t-menu__link-item:hover{
+        font-size: 60px !important;
+}*/
+
+
+/* Параметры хедера появляющегося на прокрутке */
+.uc-hidebleHeader {
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    top: -40px;
+    opacity: 0;
+    z-index: 5000;
+    transition: opacity .35s,top .35s;
+}
+
+.uc-hidebleHeader_visible {
+    top: 0px;
+    opacity: 1;
+}
+
+
+/* Красный слайдер на красной перетяжке */
+
+.main-slider .tn-atom__slds-img{ /*параметры тонирования для слайдов*/
+    background-color: var(--main-red-color) !important;
+    background-blend-mode: multiply;
+}
+
+/*Параметры тонированиядля видео*/
+.RedBlock-Main-video{ 
+    mix-blend-mode: multiply;
+    transform: scale(1.3);
+}
+
+.RedBlock-Main-video > .tn-atom{
+    /*отключаем баг с черным фоном видео*/
+    background-color: transparent !important;
+    
+}
+
+/*
+Эффект размытия элементов блока "Последние проекты"
+
+.uc-l-projects-block .t649__linkwrapper{
+   position: relative;    
+}
+
+.uc-l-projects-block .t649__linkwrapper > div{
+    position: relative;   
+    z-index:3;
+}
+
+.uc-l-projects-block .t649__linkwrapper:before, .uc-l-projects-block .t649__linkwrapper:after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 90%;
+    height: 49%;
+    bottom: -7%;
+    left: -16%;
+    border-radius: 100%;
+    background-image: linear-gradient(#ffffff00, #ee6b623d);
+    opacity: 0;
+    filter: blur(26px);
+    transition: opacity 0.45s cubic-bezier(0.4, 0, 1, 1);
+    transform: rotateZ(19deg);
+    
+}
+
+.uc-l-projects-block .t649__linkwrapper:after{
+    width: 120%;
+    height: 110%;
+    bottom: initial;
+    top: -2%;
+    left: initial;
+    right: -5%;
+    background-image: linear-gradient(#ee6b6266, #ffffff00, #ffffff00);
+    transform: rotateZ(30deg);
+    filter: blur(26px);
+}
+
+.uc-l-projects-block .t649__linkwrapper:hover:before, .uc-l-projects-block .t649__linkwrapper:hover:after{
+    opacity:1;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 1, 1);
+}
+*/
+
+
+/*Блок последние проекты*/
+
+.uc-l-projects-block a {
+    position: relative;
+    transition: all .35s ease-in-out 0s  !important;
+    
+}
+
+.uc-l-projects-block a .t-heading {
+    transition: all .35s ease-in-out 0s  !important;
+}
+
+.uc-l-projects-block a:hover .t-heading {
+    color: var(--main-red-color) !important;
+    transition: all .35s ease-in-out 0s  !important;
+}
+
+.uc-l-projects-block .t404__imgbox{
+    overflow: hidden;
+}
+
+.uc-l-projects-block a .t404__img{
+    transition: all .35s ease-in-out 0s  !important;
+}
+
+.uc-l-projects-block a:hover .t404__img{
+    transform: scale(1.05);
+    transition: all .35s ease-in-out 0s  !important;
+}
+
+
+.uc-l-projects-block .ribbonImg_award_best-office{
+    position: absolute;
+    top: 0;
+    z-index: 5;
+}
+
+
+.uc-l-projects-block .ribbonImg_award_best-office img{
+    width: 240px;
+    left: -10px;
+    bottom: 12px;
+    position: absolute;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 480px){
+    .uc-l-projects-block .t-uptitle_sm {
+        margin-top: 26px !important;
+    }    
+}
+    
+@media screen and (max-width: 640px){
+    .uc-l-projects-block .t-uptitle_sm, .uc-l-projects-block .t-text_sm {
+        font-size: 14px !important;
+    }
+}
+
+@media screen and (min-width:480px) and (max-width:960px){
+    
+    .uc-l-projects-block .t649__col.t-col_6{
+        display: block;
+    }
+    .uc-l-projects-block .t649__linkwrapper{
+        display: flex;
+        align-content: space-between;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+    }
+    .uc-l-projects-block .t649__textwrapper{
+        display: block;
+    }
+    .uc-l-projects-block .projectItem-Image{
+        width: 50%;
+    }
+}
+
+
+@media screen and (max-width: 960px){
+    .uc-l-projects-block .ribbonImg_award_best-office{
+        /*display: none;*/
+    }
+    .uc-l-projects-block .t649__linkwrapper{
+        /*position: relative;*/
+        /*width: 100%;*/
+        /*display: block;*/
+    }
+    
+    .uc-l-projects-block .t649__uptitle{
+        padding-top: 0 !important;
+    }
+    /*.uc-l-projects-block .t-container{*/
+    /*    max-width: 100% !important;*/
+    /*}*/
+}
+
+
+/* Блок последние проекты SVG ссылка с движущейся стрелкой*/
+/*Блок вернуться к проектам SVG ссылка с движущейся стрелкой*/
+#more-projects, #back-to-projects {
+    overflow: visible;    
+}
+
+#more-projects path, #back-to-projects path {
+    fill: var(--main-dark-color) !important;
+    transition: fill .35s ease-in-out 0s, transform .5s ease-in-out 0s;
+}
+ 
+#more-projects:hover path, #back-to-projects:hover path {
+    fill: var(--main-red-color) !important;
+} 
+
+#more-projects:hover #more-projects__arrow{
+    transform: translateX(8px);
+}
+
+#back-to-projects:hover #back-to-projects__arrow{
+    transform: translateX(-8px);
+}
+
+
+/*Блок Компетенции*/
+
+
+.competence-bl__linkWrapper [class*="competence-bl__link-"]{
+        overflow: hidden;
+}
+
+
+.competence-bl__linkWrapper [class*="competence-bl__link-"] a, .competence-bl__linkWrapper [class*="competence-bl__link-"] div{
+    transition: all .35s ease-in-out 0s  !important;
+}
+
+.competence-bl__linkWrapper:hover [class*="competence-bl__link-"] a, .competence-bl__linkWrapper:hover [class*="competence-bl__link-"] div {
+    color: var(--main-red-color) !important;
+    transition: all .35s ease-in-out 0s  !important;
+}
+
+
+.competence-bl__linkWrapper [class*="competence-bl__link-"] .t-bgimg {
+    transition: all .35s ease-in-out 0s  !important;    
+}
+
+.competence-bl__linkWrapper:hover [class*="competence-bl__link-"] .t-bgimg {
+    transform: scale(1.05);
+    transition: all .35s ease-in-out 0s  !important;  
+}
+
+
+
+/*СТРАНИЦА КАТАЛОГ ПРОЕКТОВ*/
+
+.FiltersContainer{
+    margin-bottom: 44px;
+}
+
+.FilterByType{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: stretch;
+    
+}
+
+.FilterByType-Label{
+    color: #000000;
+    font-size: 14px;
+    font-family: 'PT Mono',Arial,sans-serif;
+    line-height: 1.13;
+    font-weight: 600;
+    letter-spacing: 0.25px;
+    margin: 0 0 10px 0;
+    display: inline-block;
+}
+
+.FilterByType-ChipsBlock{
+    display:flex;
+    flex-wrap: wrap;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.FilterByType-ChoiceChip{
+    list-style-type: none;
+    display: inline-flex;
+    font-size: 22px;
+    font-family: 'Inter',Arial,sans-serif;
+    line-height: 1.6;
+    font-weight: 580;
+    letter-spacing: 0.25px;
+    margin: 0 24px 0 0;
+}
+
+.FilterByType-ChoiceChip a{
+    color: var(--main-red-color) !important;
+    transition: all .35s ease-in-out 0s !important;
+}
+
+.FilterByType-ChoiceChip:hover a{
+    color: var(--main-dark-color) !important;
+    transition: all .35s ease-in-out 0s !important;
+}
+
+.FilterByType-ChoiceChip_active{
+    
+}
+
+.FilterByType-ChoiceChip_active a{
+    color: var(--main-dark-color) !important;
+}
+
+.ProjectCard{
+    
+}
+
+.ProjectCard_hidden{
+    display: none;
+}
+
+
+/*Модификатор для блока IX02 (блок с проектами) на странице "Каталога проектов"*/
+
+.uc-projects-block .t404__link{
+    position: relative;
+}
+
+.uc-projects-block a .t404__imgbox{
+    overflow: hidden;
+}
+
+.uc-projects-block a .t404__img{
+    transition: all .35s ease-in-out 0s !important;
+}
+
+.uc-projects-block a:hover .t404__img{
+    transform: scale(1.05);
+    transition: all .35s ease-in-out 0s !important;
+}
+
+.uc-projects-block a .t404__title{
+    transition: all .35s ease-in-out 0s !important;
+}
+
+.uc-projects-block a:hover .t404__title{
+    color: var(--main-red-color) !important;
+    transition: all .35s ease-in-out 0s !important;
+}
+
+
+.uc-projects-block .ribbonImg_award_best-office{
+    position: absolute;
+    top: 0;
+    z-index: 5;
+}
+
+
+.uc-projects-block .ribbonImg_award_best-office img{
+    width: 240px;
+    left: -10px;
+    bottom: 12px;
+    position: absolute;
+    border-radius: 6px;
+}
+
+.ribbonImg{
+    border-radius: 6px;
+}
+
+
+/*СТРАНИЦА КАРТОЧКА ПРОЕКТА*/
+
+/*Блок "Главная информация о проекте"*/
+.uc-project-main-info{
+    
+}
+
+.uc-project-main-info .project-award-link a{
+    transition: all 0.25s ease-in-out 0s;
+}
+
+.uc-project-main-info .project-award-link a:hover{
+    color: var(--main-red-color) !important;
+    transition: all 0.25s ease-in-out 0s;
+}
+
+.uc-project-main-info .project-award-link a:hover span{
+    color: var(--main-green-color) !important;
+}
+
+
+/*Конец блока "Главная информация о проекте"*/
+
+
+/*Блок "Лид проекта (текст)"*/
+@media screen and (width: 1200px){
+    .uc-lead-txt .t-container {
+        max-width: 1180px !important;
+    }
+}
+
+@media screen and (width: 960px){
+    .uc-lead-txt .t-container {
+        margin-left: unset;
+        margin-right: unset;
+    }
+
+    .uc-lead-txt .t-col{
+        padding-left: 10px !important;
+    }
+}
+
+
+/*Конец блока "Лид проекта (текст)"*/
+
+
+/*Блок "карточка связанного проекта"*/
+.uc-binded-project{
+    
+}
+
+.uc-binded-project .t-carousel__indicators{
+    margin-top: -60px;
+}
+
+
+.uc-binded-project .t406__cell{
+    background-color: var(--main-red-color);
+}
+
+.uc-binded-project .t406__bg{
+    filter: grayscale(1) opacity(0.5) contrast(0.9);
+    mix-blend-mode: multiply;
+    transition: all .35s ease-in-out 0s !important;
+} 
+
+.uc-binded-project a:hover .t406__bg{
+    filter: grayscale(1) opacity(0.5)  contrast(0.9) brightness(1.2);
+    transform: scale(1.05);
+    transition: all .35s ease-in-out 0s !important;
+}
+
+.uc-binded-project .t406__uptitle, .uc-binded-project .t406__title, .uc-binded-project .t406__text{
+    text-shadow: 0px 0px 20px #1a20249e;
+}
+
+.uc-binded-project .t406__uptitle{
+    margin-bottom: 10px !important;
+}
+
+.uc-binded-project .t406__text {
+    margin-top: 0 !important;
+}
+
+
+/*.uc-binded-project .t406__uptitle, .uc-binded-project .t406__title, .uc-binded-project .t406__text {
+    display: inline-block;
+    background-color: #ee6b6214;
+    backdrop-filter: blur(10px);
+    padding: 0 20px;
+}*/
+
+
+
+
+/*Конец блока "карточка связанного проекта"*/
+
+/*Блок "Мета информация о проекте"*/
+
+.uc-project-meta-info .t-title {
+    padding-top:0;
+    margin-top:-48px;
+}
+
+.uc-project-meta-info .t-descr a{
+    color:#fff !important;
+    transition: all 0.25s ease-in-out 0s;
+}
+
+.uc-project-meta-info .t-descr a:hover{
+    color: var(--main-red-color) !important;
+    transition: all 0.25s ease-in-out 0s;
+}
+
+/*Конец блока "Мета информация о проекте"*/
+
+
+
+/*Блок "Смежные проекты"*/
+.uc-adjacent-projects .t407__col .t-uptitle, .uc-adjacent-projects .t407__col .t-name {
+     transition: var(--link-transition);
+}
+
+.uc-adjacent-projects .t407__col:hover .t-uptitle, .uc-adjacent-projects .t407__col:hover .t-name {
+     color: var(--main-red-color) !important;
+     transition: var(--link-transition);
+}
+
+.uc-adjacent-projects .t407__textwrapper {
+     color: var(--main-red-color) !important;
+     transition: var(--link-transition);
+}
+
+.uc-adjacent-projects .t407__col + .t407__col:hover .t-uptitle,  .uc-adjacent-projects .t407__col + .t407__col:hover .t-name {
+      color: var(--main-dark-color) !important;
+      transition: var(--link-transition);
+}
+/*Конец блока "Смежные проекты"*/
+
+/* Параметры нижней навигационной панели */
+.uc-bottom-nav-panel{
+    position: fixed;
+    bottom: 0;
+    opacity: 1;
+    z-index: 2000;
+    width: 100%;
+    height: 60px;
+    background: rgb(255 255 255);
+  /*  background: rgb(255 255 255 / 85%);    
+    -webkit-backdrop-filter: blur(18px);
+            backdrop-filter: blur(18px);*/
+    border-top: 0.5px solid var(--main-red-color);
+    transition: opacity .35s,bottom .35s;
+}
+.uc-bottom-nav-panel_hidden {
+    bottom: -60px;
+    opacity: 0;
+}
+
+@media screen and (max-width: 580px) {
+    .uc-bottom-nav-panel .back-to-projects-link{
+        display:none;
+    }
+}
+
+/*КОНЕЦ блока "Конец блока "Мета информация о проекте"*/
+
+/*Попап формы заявки*/ 
+.uc-order-popup{
+    
+}
+
+.uc-order-popup .t-popup__container{
+    border-radius: 45px;
+}
+
+.uc-order-popup .t702__wrapper {
+    padding: 60px 45px;
+}
+
+
+.uc-order-popup .t-submit{
+    font-size:18px;
+}
+
+@media screen and (max-width: 560px) {
+    
+    .uc-order-popup .t-popup__container{
+        padding-top: 0 !important;
+    }
+    .uc-order-popup .t-popup__block-close{
+        border-radius: 45px 45px 0 0;
+        background: #ffffff;
+    }
+    
+    .uc-order-popup .t-popup__close-icon g{
+        fill: var(--main-dark-color);
+    }
+}
+/*КОНЕЦ "Попапа формы заявки"*/
+
+/*КОНЕЦ карточки проекта*/
+
+/*КОНЕЦ ГЛОБАЛЬНЫЕ СТИЛИ (общие настройки)*/
