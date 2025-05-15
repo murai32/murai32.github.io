@@ -291,7 +291,7 @@ body {
 /*Параметры тонированиядля видео*/
 .RedBlock-Main-video{ 
     /*mix-blend-mode: multiply;*/
-    transform: scale(1.3);
+    transform: scale(1.1);
 }
 
 .RedBlock-Main-video > .tn-atom{
