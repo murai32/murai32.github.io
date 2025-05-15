@@ -290,7 +290,7 @@ body {
 
 /*Параметры тонированиядля видео*/
 .RedBlock-Main-video{ 
-    mix-blend-mode: multiply;
+    /*mix-blend-mode: multiply;*/
     transform: scale(1.3);
 }
 
