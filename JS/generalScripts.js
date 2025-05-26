@@ -194,15 +194,20 @@ function initHidebleBottomNav() {
 
 /* УБИРАЕМ ТИЛЬДОВСКИЙ ЛЕЙБАК В ФУТЕРЕ*/
 function removeNastyFooter() {
-    let nastyFooter = document.querySelector('img[fetchpriority*="low"]');
+    // let nastyFooter = document.querySelector('img[fetchpriority*="low"]');
+    let nastyFooter = document.querySelector('#tildacopy');
     if (nastyFooter != undefined) {
         window.setTimeout(function() {
-            let parentlevel = 4; //указываем сколько уровней до целевого родителя. Через ж!, но пока так.
+            // let parentlevel = 4; //указываем сколько уровней до целевого родителя. Через ж!, но пока так.
 
-            for (let i = 1; i < 5; i++) {
-                nastyFooter = nastyFooter.parentNode;
-            };
-            nastyFooter.remove();
+            // for (let i = 1; i < 5; i++) {
+            //     nastyFooter = nastyFooter.parentNode;
+            // };
+            // nastyFooter.remove();
+            nastyFooter.style.position = 'absolute'; // убираем элемент с потока
+            nastyFooter.style.top = '-1000vh !impotant'; // убираем элемент с потока
+            nastyFooter.style.left = '-1000px impotant'; // убираем элемент с потока
+
         }, 450);
     } else {
         console.error('Тильдовский лейбак не убирается. Смотри на элемента тильдовского футера к которому можно привязать ссылку на элемент');

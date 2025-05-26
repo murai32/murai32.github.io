@@ -292,7 +292,7 @@ body {
 .main-navigation .main-navigation__link a{
     display: inline-block;
     color: #fff !important;
-    transition: color .35s ease-in-out 0s, transform .5s ease-in-out 0s;
+    transition: color .35s ease-in-out 0s, transform .5s     ease-in-out 0s;
 }
  
 .main-navigation .main-navigation__link a:hover{
