@@ -330,6 +330,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 
-    //removeNastyFooter();//Отключаем тильдовский маркетинг
+    removeNastyFooter();//Отключаем тильдовский маркетинг
     initCustomCursor(); // Всегда инициируй последним!
 });
