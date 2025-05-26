@@ -294,7 +294,7 @@ body {
     transition: fill .35s ease-in-out 0s, transform .5s ease-in-out 0s;
 }
  
-.main-navigation .main-navigation__link a:hover{
+.main-navigation .main-navigation__link:hover a{
     color: var(--main-dark-color) !important;
     transform: translateX(28px);
 } 
