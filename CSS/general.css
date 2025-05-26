@@ -283,16 +283,18 @@ body {
 
 /* ПЕРВЫЙ БЛОК НА ГЛАВНОЙ СТРАНИЦЕ */
 /*Ссылки стилей главной навигации*/
+/* This section defines the styles for the main navigation links, including their default appearance, hover effects, and transitions. */
 .main-navigation{
     overflow: visible;    
 }
 
-.main-navigation .main-navigation__link а {
+
+.main-navigation .main-navigation__link a{
     fill: var(--main-dark-color) !important;
     transition: fill .35s ease-in-out 0s, transform .5s ease-in-out 0s;
 }
  
-.main-navigation .main-navigation__link а:hover {
+.main-navigation .main-navigation__link a:hover{
     fill: var(--main-red-color) !important;
     transform: translateX(8px);
 } 
