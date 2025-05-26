@@ -204,9 +204,8 @@ function removeNastyFooter() {
             //     nastyFooter = nastyFooter.parentNode;
             // };
             // nastyFooter.remove();
-            nastyFooter.style.position = 'absolute'; // убираем элемент с потока
-            nastyFooter.style.top = '-1000vh !impotant'; // убираем элемент с потока
-            nastyFooter.style.left = '-1000px impotant'; // убираем элемент с потока
+            nastyFooter.style.position = 'absolute !important'; // убираем элемент с потока
+            nastyFooter.style.top = '-1000vh !important'; // убираем элемент с потока
 
         }, 450);
     } else {
