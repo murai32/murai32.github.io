@@ -295,9 +295,9 @@ body {
     transition: color .35s ease-in-out 0s, transform .5s ease-in-out 0s;
 }
  
-.main-navigation .main-navigation__link:hover a{
+.main-navigation .main-navigation__link a:hover{
     color: var(--main-dark-color) !important;
-    transform: translateX(32px);
+    transform: translateX(-8px);
 } 
 
 /*Конец ссылок стилей главной навигации*/
