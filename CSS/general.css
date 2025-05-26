@@ -290,13 +290,13 @@ body {
 
 
 .main-navigation .main-navigation__link a{
-    fill: var(--main-dark-color) !important;
+    color: #fff !important;
     transition: fill .35s ease-in-out 0s, transform .5s ease-in-out 0s;
 }
  
 .main-navigation .main-navigation__link a:hover{
-    fill: var(--main-red-color) !important;
-    transform: translateX(8px);
+    color: var(--main-dark-color) !important;
+    transform: translateX(28px);
 } 
 
 /*Конец ссылок стилей главной навигации*/
