@@ -281,6 +281,27 @@ body {
 }
 
 
+/* ПЕРВЫЙ БЛОК НА ГЛАВНОЙ СТРАНИЦЕ */
+/*Ссылки стилей главной навигации*/
+.main-navigation{
+    overflow: visible;    
+}
+
+.main-navigation .main-navigation__link а {
+    fill: var(--main-dark-color) !important;
+    transition: fill .35s ease-in-out 0s, transform .5s ease-in-out 0s;
+}
+ 
+.main-navigation .main-navigation__link а:hover {
+    fill: var(--main-red-color) !important;
+    transform: translateX(8px);
+} 
+
+/*Конец ссылок стилей главной навигации*/
+
+
+
+
 /* Красный слайдер на красной перетяжке */
 
 .main-slider .tn-atom__slds-img{ /*параметры тонирования для слайдов*/
