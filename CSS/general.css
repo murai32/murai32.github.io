@@ -291,12 +291,12 @@ body {
 
 .main-navigation .main-navigation__link a{
     color: #fff !important;
-    transition: fill .35s ease-in-out 0s, transform .5s ease-in-out 0s;
+    transition: color .35s ease-in-out 0s, transform .5s ease-in-out 0s;
 }
  
 .main-navigation .main-navigation__link:hover a{
     color: var(--main-dark-color) !important;
-    transform: translateX(28px);
+    transform: translateX(32px);
 } 
 
 /*Конец ссылок стилей главной навигации*/
