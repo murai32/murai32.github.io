@@ -286,7 +286,7 @@ body {
 /* This section defines the styles for the main navigation links, including their default appearance, hover effects, and transitions. */
 .main-navigation{
     overflow: visible;    
-    counter-reset: nav-counter;
+    /* counter-reset: nav-counter; */
 }
 
 
@@ -301,10 +301,10 @@ body {
     transform: translateX(-8px);
 } 
 
-.main-navigation .main-navigation__link a:hover::before {
+/* .main-navigation .main-navigation__link a:hover::before {
     counter-increment: nav-counter;
     content: "[0" counter(nav-counter) "]";
-}
+} */
 /*Конец ссылок стилей главной навигации*/
 
 
