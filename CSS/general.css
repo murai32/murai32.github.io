@@ -199,6 +199,12 @@ body {
     height: 100%;
 }
 
+@media screen and (max-width: 960px){
+    #rec467412673 .t280__menu {
+        padding-left: 5%;
+    }
+}
+
 #rec467412673 .t280__menu {
     padding-left: 10%;
     transform: initial;
