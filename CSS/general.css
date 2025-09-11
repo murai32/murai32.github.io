@@ -647,6 +647,11 @@ body {
     border-radius: 6px;
 }
 
+.uc-projects-block .t404__uptitle {
+    /*Временно отключаем отображение элемента даты*/
+    display: none;
+}
+
 .ribbonImg{
     border-radius: 6px;
 }
