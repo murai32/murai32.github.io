@@ -624,7 +624,7 @@ body {
 }
 
 .uc-projects-block .t404__textwrapper, .project-snippet .t404__textwrapper {
-    margin-top: 20px;
+    margin: 20px 0 0 0;
 }
 
 
