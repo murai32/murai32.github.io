@@ -623,9 +623,14 @@ body {
     transition: all .35s ease-in-out 0s !important;    
 }
 
+.uc-projects-block .t404__textwrapper, .project-snippet .t404__textwrapper {
+    margin-top: 20px;
+}
+
+
 .uc-projects-block a .t404__title, .project-snippet a .t404__title {
     transition: all .35s ease-in-out 0s !important;
-    margin-bottom: 0;
+    margin-bottom: 8px;
 }
 
 .uc-projects-block a:hover .t404__title, .project-snippet a:hover .t404__title {
