@@ -604,42 +604,43 @@ body {
 
 
 /*Модификатор для блока IX02 (блок с проектами) на странице "Каталога проектов"*/
+/* Стили также описывают внешний вид блока "Слайдер с проектами" на странице "О бюро" */
 
-.uc-projects-block .t404__link{
+.uc-projects-block .t404__link, .project-snippet .t404__link {
     position: relative;
 }
 
-.uc-projects-block a .t404__imgbox{
+.uc-projects-block a .t404__imgbox, .project-snippet .t404__imgbox {
     overflow: hidden;
 }
 
-.uc-projects-block a .t404__img{
+.uc-projects-block a .t404__img, .project-snippet a .t404__img {
     transition: all .35s ease-in-out 0s !important;
 }
 
-.uc-projects-block a:hover .t404__img{
+.uc-projects-block a:hover .t404__img, .project-snippet a:hover .t404__img {
     transform: scale(1.05);
     transition: all .35s ease-in-out 0s !important;
 }
 
-.uc-projects-block a .t404__title{
+.uc-projects-block a .t404__title, .project-snippet a .t404__title {
     transition: all .35s ease-in-out 0s !important;
 }
 
-.uc-projects-block a:hover .t404__title{
+.uc-projects-block a:hover .t404__title, .project-snippet a:hover .t404__title {
     color: var(--main-red-color) !important;
     transition: all .35s ease-in-out 0s !important;
 }
 
 
-.uc-projects-block .ribbonImg_award_best-office{
+.uc-projects-block .ribbonImg_award_best-office, .project-snippet .ribbonImg_award_best-office {
     position: absolute;
     top: 0;
     z-index: 5;
 }
 
 
-.uc-projects-block .ribbonImg_award_best-office img{
+.uc-projects-block .ribbonImg_award_best-office img, .project-snippet .ribbonImg_award_best-office img {
     width: 240px;
     left: -10px;
     bottom: 12px;
@@ -647,7 +648,7 @@ body {
     border-radius: 6px;
 }
 
-.uc-projects-block .t404__uptitle {
+.uc-projects-block .t404__uptitle, .project-snippet .t404__uptitle {
     /*Временно отключаем отображение элемента даты*/
     display: none;
 }
