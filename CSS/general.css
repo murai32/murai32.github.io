@@ -620,11 +620,12 @@ body {
 
 .uc-projects-block a:hover .t404__img, .project-snippet a:hover .t404__img {
     transform: scale(1.05);
-    transition: all .35s ease-in-out 0s !important;
+    transition: all .35s ease-in-out 0s !important;    
 }
 
 .uc-projects-block a .t404__title, .project-snippet a .t404__title {
     transition: all .35s ease-in-out 0s !important;
+    margin-bottom: 0;
 }
 
 .uc-projects-block a:hover .t404__title, .project-snippet a:hover .t404__title {
