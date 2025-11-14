@@ -880,9 +880,9 @@ body {
   width: 800px; /* Установи ширину меньше, чем общая ширина карточек. Например, для 4 карточек по 200px + отступы = >800px */
   margin: 0 auto;
   overflow: visible;
-  background-color: #ff00001f;
+  /* background-color: #ff00001f;
   padding-top: 300px;
-  padding-bottom: 600px;
+  padding-bottom: 600px; */
 }
 
 .notable-projects .controls {
@@ -893,7 +893,7 @@ body {
   align-items: stretch;
   gap: 0;
   margin-right: -12px;
-  background-color: #ff00001f;
+  /* background-color: #ff00001f; */
   /*   background-color: #48ff4873; */
 }
 
