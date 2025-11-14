@@ -831,10 +831,8 @@ body {
 
 /*КОНЕЦ блока "Конец блока "Мета информация о проекте"*/
 
-/*Попап формы заявки*/ 
-.uc-order-popup{
-    
-}
+/*Попап формы заявки*/     
+
 
 .uc-order-popup .t-popup__container{
     border-radius: 45px;
@@ -909,7 +907,7 @@ body {
   flex: 0 0 400px; /* Фиксированная ширина карточки */
   margin: 0 48px 0 0; /* Отступ между карточками */
   /* background: #f0f0f0; */
-  padding: 10px;
+  /* padding: 10px; */
   /*     border: 1px solid #ddd; */
   /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
   text-align: center;
