@@ -890,7 +890,7 @@ body {
   justify-content: right;
   align-items: stretch;
   gap: 0;
-  margin-right: -12px;
+  margin: 0 -12px 24px 0;
   /* background-color: #ff00001f; */
   /*   background-color: #48ff4873; */
 }
