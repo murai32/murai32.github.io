@@ -2,7 +2,7 @@ const container = document.querySelector(".notable-projects");
 const slider = document.querySelector(".notable-projects .slider");
 const leftBtn = document.querySelector(".notable-projects .nav-btn.left");
 const rightBtn = document.querySelector(".notable-projects .nav-btn.right");
-const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+// const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
 function RunProjestsSlider() {
   //Логика работы слайдера
