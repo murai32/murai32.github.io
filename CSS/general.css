@@ -623,7 +623,7 @@ body {
     transition: all .35s ease-in-out 0s !important;    
 }
 
-.uc-projects-block .t404__textwrapper, .project-snippet .t404__textwrapper {
+.uc-projects-block .t404__textwrapper {
     margin: 20px 0 0 0;
 }
 
@@ -907,12 +907,16 @@ body {
 
 .notable-projects .project-snippet {
   flex: 0 0 400px; /* Фиксированная ширина карточки */
-  margin: 0 20px 0 0; /* Отступ между карточками */
-  background: #f0f0f0;
+  margin: 0 48px 0 0; /* Отступ между карточками */
+  /* background: #f0f0f0; */
   padding: 10px;
   /*     border: 1px solid #ddd; */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
   text-align: center;
+}
+
+.notable-projects .project-snippet .t404__textwrapper {
+    margin: 28px 0 0 0;
 }
 
 .notable-projects .project-snippet img {
@@ -927,8 +931,8 @@ body {
 .notable-projects .project-snippet .t-heading {
   color: #1a2024;
   font-family: "Inter";
-  font-weight: 400;
-  font-size: 28px;
+  font-weight: 500;
+  font-size: 24px;
 }
 
 .notable-projects .project-snippet .t-descr {
