@@ -868,3 +868,111 @@ body {
 /*КОНЕЦ карточки проекта*/
 
 /*КОНЕЦ ГЛОБАЛЬНЫЕ СТИЛИ (общие настройки)*/
+
+
+
+
+/*СТРАНИЦА О БЮРО*/
+
+/*Блок "Некторые проекты"*/
+.notable-projects {
+  position: relative;
+  width: 800px; /* Установи ширину меньше, чем общая ширина карточек. Например, для 4 карточек по 200px + отступы = >800px */
+  margin: 0 auto;
+  overflow: visible;
+  background-color: #ff00001f;
+  padding-top: 300px;
+  padding-bottom: 600px;
+}
+
+.notable-projects .controls {
+  /*   height: 32px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: stretch;
+  gap: 0;
+  margin-right: -12px;
+  background-color: #ff00001f;
+  /*   background-color: #48ff4873; */
+}
+
+.notable-projects .slider {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  transition: transform 0.4s cubic-bezier(0.17, 0.1, 0.41, 1.02); /* Плавный сдвиг */
+  cursor: grab; /* Курсор для драга */
+}
+
+.notable-projects .project-snippet {
+  flex: 0 0 400px; /* Фиксированная ширина карточки */
+  margin: 0 20px 0 0; /* Отступ между карточками */
+  background: #f0f0f0;
+  padding: 10px;
+  /*     border: 1px solid #ddd; */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.notable-projects .project-snippet img {
+  width: 100%;
+  height: auto;
+}
+
+.notable-projects .project-snippet:last-child {
+  margin-right: 0; /* Без отступа у последней */
+}
+
+.notable-projects .project-snippet .t-heading {
+  color: #1a2024;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 28px;
+}
+
+.notable-projects .project-snippet .t-descr {
+  font-size: 18px;
+  color: #1a2024;
+  font-family: "PT Mono";
+  padding-top: 6px;
+  padding-bottom: 20px;
+}
+
+.notable-projects .project-snippet a {
+  text-decoration: none;
+}
+
+.notable-projects .nav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-basis: fit-content;
+}
+
+/*.notable-projects .nav-btn.left {
+  padding: 10px 0 10px 10px;
+}
+
+.notable-projects .nav-btn.right {
+  padding: 10px 0 10px 0;
+  background-color: #0000ff3d;  
+} */
+
+.notable-projects .nav-btn.disabled svg path {
+  fill: rgba(118, 128, 128, 0.4);
+}
+
+.notable-projects .nav-btn svg path {
+  fill: rgb(35, 31, 32);
+}
+
+.notable-projects .nav-btn:hover:not(.disabled) svg path {
+  fill: rgb(233, 112, 100);
+}
+
+.notable-projects .grabbing {
+  cursor: grabbing; /* Курсор во время драга */
+}
+
+/*КОНЕЦ блока "Некторые проекты"*/
