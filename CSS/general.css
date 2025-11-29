@@ -510,16 +510,20 @@ body {
 }
 
 .link-with-arrow:hover{
-    color: var(--main-red-color);
+    color: var(--main-red-color) !important;
     transition: color .35s ease-in-out 0s;
 }
 
 .link-arrow_right, .link-arrow_left {
-    fill: var(--main-dark-color) !important;
-    transition: fill .35s ease-in-out 0s, transform .5s ease-in-out 0s;
+    transition: transform .5s ease-in-out 0s;
 } 
 
-.link-with-arrow:hover .link-arrow_left, .link-with-arrow:hover .link-arrow_right{
+.link-with-arrow:hover .link-arrow_left path, .link-with-arrow:hover .link-arrow_right path{
+    fill: var(--main-red-color) !important;
+    transition: fill .35s ease-in-out 0s,
+}
+
+.link-with-arrow:hover .link-arrow_left path, .link-with-arrow:hover .link-arrow_right path{
     fill: var(--main-red-color) !important;
 }
 
