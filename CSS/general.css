@@ -518,10 +518,10 @@ body {
 }
 
 .link-with-arrow .link-arrow_left, .link-with-arrow .link-arrow_right {
-    transition: transform .5s ease-in-out 0s;
+    transition: transform .5s ease-in-out 0s !important;
 } 
 
-.link-arrow_right path, .link-arrow_left path {
+.link-arrow_right path, .link-arrow_left path { 
     fill-opacity: 1 !important;
     fill: var(--main-dark-color); 
     transition: fill .35s ease-in-out 0s;
