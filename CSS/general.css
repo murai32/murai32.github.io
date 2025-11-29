@@ -506,12 +506,15 @@ body {
 /* Универсальные стили для ссылок со стрелками */
 .link-with-arrow{
     overflow: visible;
-    color: var(--main-dark-color) !important;
 }
 
-.link-with-arrow:hover{
-    color: var(--main-red-color) !important;
+.link-with-arrow div{
+    color: var(--main-dark-color) !important;
     transition: color .35s ease-in-out 0s;
+}
+
+.link-with-arrow:hover div{
+    color: var(--main-red-color) !important;
 }
 
 .link-arrow_right, .link-arrow_left {
