@@ -521,9 +521,14 @@ body {
     transition: transform .5s ease-in-out 0s;
 } 
 
+.link-arrow_right path, .link-arrow_left path {
+    fill-opacity: 1 !important;
+    fill: var(--main-dark-color); 
+    transition: fill .35s ease-in-out 0s;
+} 
+
 .link-with-arrow:hover .link-arrow_left path, .link-with-arrow:hover .link-arrow_right path{
     fill: var(--main-red-color) !important;
-    transition: fill .35s ease-in-out 0s,
 }
 
 .link-with-arrow:hover .link-arrow_left path, .link-with-arrow:hover .link-arrow_right path{
