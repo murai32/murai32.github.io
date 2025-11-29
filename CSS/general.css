@@ -506,7 +506,7 @@ body {
 /* Универсальные стили для ссылок со стрелками */
 .link-with-arrow{
     overflow: visible;
-    color: var(--main-dark-color);
+    color: var(--main-dark-color) !important;
 }
 
 .link-with-arrow:hover{
