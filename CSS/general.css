@@ -510,7 +510,7 @@ body {
 
 .link-with-arrow div{
     color: var(--main-dark-color) !important;
-    transition: color .35s ease-in-out 0s;
+    transition: color .35s ease-in-out 0s !important;
 }
 
 .link-with-arrow:hover div{
