@@ -533,17 +533,25 @@ body {
 
 .link-with-arrow:hover .link-arrow_left path, .link-with-arrow:hover .link-arrow_right path{
     fill: var(--main-red-color) !important;
-}
-
-.link-with-arrow:hover .link-arrow_left {
+}.link-with-arrow:hover .link-arrow_left {
     transform: translateX(-8px);
 }
 
- .link-with-arrow:hover .link-arrow_right{
+.link-with-arrow:hover .link-arrow_right {
     transform: translateX(8px);
- }
+}
 
+.link-with-arrow__disabled {
+    opacity: 0.5 !important;
+}
 
+.link-with-arrow__disabled div {
+    color: var(--main-dark-color) !important;
+}
+
+.link-with-arrow__disabled:hover div {
+    color: var(--main-dark-color) !important;
+}
 /*Блок Компетенции*/
 
 
