@@ -517,7 +517,7 @@ body {
     color: var(--main-red-color) !important;
 }
 
-.link-arrow_right, .link-arrow_left {
+.link-with-arrow .link-arrow_left, .link-with-arrow .link-arrow_right {
     transition: transform .5s ease-in-out 0s;
 } 
 
