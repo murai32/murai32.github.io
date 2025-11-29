@@ -503,6 +503,34 @@ body {
     transform: translateX(-8px);
 }
 
+/* Универсальные стили для ссылок со стрелками */
+.link-with-arrow{
+    overflow: visible;
+    color: var(--main-dark-color);
+}
+
+.link-with-arrow:hover{
+    color: var(--main-red-color);
+    transition: color .35s ease-in-out 0s;
+}
+
+.link-arrow_right, .link-arrow_left {
+    fill: var(--main-dark-color) !important;
+    transition: fill .35s ease-in-out 0s, transform .5s ease-in-out 0s;
+} 
+
+.link-with-arrow:hover .link-arrow_left, .link-with-arrow:hover .link-arrow_right{
+    fill: var(--main-red-color) !important;
+}
+
+.link-with-arrow:hover .link-arrow_left {
+    transform: translateX(-8px);
+}
+
+ .link-with-arrow:hover .link-arrow_right{
+    transform: translateX(8px);
+ }
+
 
 /*Блок Компетенции*/
 
