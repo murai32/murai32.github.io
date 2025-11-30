@@ -132,20 +132,20 @@ body {
     /* описать особенности данной вариации списка */
 }
 
-.list-item_link .list-item-bullet div{
+a.list-item .list-item-bullet div{
     transition: var(--link-transition) !important;
 }
 
-.list-item_link .list-item-text div{
+a.list-item .list-item-text div{
     transition: var(--link-transition) !important;
 }
 
-.list-item_link:hover .list-item-bullet div{
+a.list-item:hover .list-item-bullet div{
     transition: var(--link-transition) !important;
     background-color: var(--main-red-color) !important;
 }
 
-.list-item_link:hover .list-item-text div{
+a.list-item:hover .list-item-text div{
     transition: var(--link-transition) !important;
     color: var(--main-red-color) !important;
 }
