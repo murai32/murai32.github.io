@@ -123,6 +123,7 @@ body {
     color: var(--main-dark-color) !important;
 }
 
+
 /* Cписки */
 .list-item {
 
@@ -152,7 +153,6 @@ a.list-item:hover .list-item-text div{
 
 .list-item_link_disabled{
     opacity: 0.5 !important;
-
 }
 
 /* .list-item_link:hover{
