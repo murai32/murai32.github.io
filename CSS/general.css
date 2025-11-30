@@ -132,12 +132,12 @@ body {
     /* описать особенности данной вариации списка */
 }
 
-.list-item-bullet{
-
+.list-item_link .list-item-bullet div{
+    transition: var(--link-transition) !important;
 }
 
-.list-item-text{
-
+.list-item_link .list-item-text div{
+    transition: var(--link-transition) !important;
 }
 
 .list-item_link:hover .list-item-bullet div{
