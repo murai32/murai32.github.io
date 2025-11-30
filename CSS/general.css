@@ -143,7 +143,11 @@ a.list-item .list-item-text div{
 }
 
 a.list-item .list-item-text div::after{
-    content: "↗";    
+    display: inline-block;
+    content: "↗";
+    font-size: 18px;
+    font-weight: 450;
+    vertical-align: middle;
 }
 
 a.list-item:hover .list-item-bullet div{
