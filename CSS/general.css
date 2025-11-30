@@ -17,7 +17,7 @@ html { font-family: 'Inter', sans-serif !important;}*/
     font-feature-settings: "case" 0, "cpsp" 0, "dlig" 0, "frac" 0, "dnom" 0, "numr" 0, "salt" 0, "subs" 0, "sups" 0, "tnum" 0, "zero", "ss01", "ss02" 0, "ss03", "ss04", "cv01", "cv02", "cv03", "cv04", "cv05", "cv06", "cv07" 0, "cv08" 0, "cv09" 0, "cv10", "cv11" 0, "calt", "ccmp", "kern";
 
     /*Анимации*/
-    --link-transition: var(--link-transition)  !important;
+    --link-transition: all .35s ease-in-out 0s;
 }
 
 /*Выделение текста*/
