@@ -141,13 +141,13 @@ body {
 }
 
 .list-item_link:hover .list-item-bullet div{
-    transition: var(--link-transition);
-    background-color: var(--main-red-color);
+    transition: var(--link-transition) !important;
+    background-color: var(--main-red-color) !important;
 }
 
 .list-item_link:hover .list-item-text {
-    transition: var(--link-transition);
-    color: var(--main-red-color);
+    transition: var(--link-transition) !important;
+    color: var(--main-red-color) !important;
 }
 
 .list-item_link_disabled{
