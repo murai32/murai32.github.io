@@ -145,7 +145,7 @@ body {
     background-color: var(--main-red-color) !important;
 }
 
-.list-item_link:hover .list-item-text {
+.list-item_link:hover .list-item-text div{
     transition: var(--link-transition) !important;
     color: var(--main-red-color) !important;
 }
@@ -155,9 +155,10 @@ body {
 
 }
 
-.list-item_link:hover{
+/* .list-item_link:hover{
+    transition: var(--link-transition) !important;
     color: var(--main-red-color) !important;
-}
+} */
 
 .list-item-bullet:hover{
 
