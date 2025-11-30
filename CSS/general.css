@@ -17,7 +17,7 @@ html { font-family: 'Inter', sans-serif !important;}*/
     font-feature-settings: "case" 0, "cpsp" 0, "dlig" 0, "frac" 0, "dnom" 0, "numr" 0, "salt" 0, "subs" 0, "sups" 0, "tnum" 0, "zero", "ss01", "ss02" 0, "ss03", "ss04", "cv01", "cv02", "cv03", "cv04", "cv05", "cv06", "cv07" 0, "cv08" 0, "cv09" 0, "cv10", "cv11" 0, "calt", "ccmp", "kern";
 
     /*Анимации*/
-    --link-transition: all .35s ease-in-out 0s  !important;
+    --link-transition: var(--link-transition)  !important;
 }
 
 /*Выделение текста*/
@@ -49,7 +49,7 @@ body {
 
 
 .link a , .link_background_dark a, .link_background_red a{
-    transition: all .35s ease-in-out 0s  !important;
+    transition: var(--link-transition)  !important;
 }
 
 .link_background_red a{
@@ -58,17 +58,109 @@ body {
 
 .link a:hover {
     color: var(--main-red-color) !important;
-    transition: all .35s ease-in-out 0s  !important;
+    transition: var(--link-transition)  !important;
 }
 
 .link_background_dark a:hover {
     color: #fff !important;
-    transition: all .35s ease-in-out 0s  !important;
+    transition: var(--link-transition)  !important;
 }
 
 .link_background_red a:hover {
     color: var(--main-dark-color) !important;
-    transition: all .35s ease-in-out 0s  !important;
+    transition: var(--link-transition)  !important;
+}
+
+/* Универсальные стили для ссылок со стрелками */
+.link-with-arrow{
+    overflow: visible;
+}
+
+.link-with-arrow div{
+    color: var(--main-dark-color) !important;
+    transition: color .35s ease-in-out 0s !important;
+}
+
+.link-with-arrow:hover div{
+    color: var(--main-red-color) !important;
+}
+
+.link-with-arrow .link-arrow_left, .link-with-arrow .link-arrow_right {
+    transition: transform .5s ease-in-out 0s !important;
+} 
+
+.link-arrow_right path, .link-arrow_left path { 
+    fill-opacity: 1 !important;
+    fill: var(--main-dark-color); 
+    transition:  var(--link-transition) !important;
+} 
+
+.link-with-arrow:hover .link-arrow_left path, .link-with-arrow:hover .link-arrow_right path{
+    fill: var(--main-red-color) !important;
+}
+
+.link-with-arrow:hover .link-arrow_left path, .link-with-arrow:hover .link-arrow_right path{
+    fill: var(--main-red-color) !important;
+}
+
+.link-with-arrow:hover .link-arrow_left {
+    transform: translateX(-8px);
+}
+
+.link-with-arrow:hover .link-arrow_right {
+    transform: translateX(8px);
+}
+
+.link-with-arrow__disabled {
+    opacity: 0.5 !important;
+}
+
+.link-with-arrow__disabled div {
+    color: var(--main-dark-color) !important;
+}
+
+.link-with-arrow__disabled:hover div {
+    color: var(--main-dark-color) !important;
+}
+
+/* Cписки */
+.list-item {
+
+}
+
+.list-item_type_1{
+    /* описать особенности данной вариации списка */
+}
+
+.list-item-bullet{
+
+}
+
+.list-item-text{
+
+}
+
+.list-item_link:hover .list-item-bullet div{
+    transition: var(--link-transition);
+    background-color: var(--main-red-color);
+}
+
+.list-item_link:hover .list-item-text {
+    transition: var(--link-transition);
+    color: var(--main-red-color);
+}
+
+.list-item_link_disabled{
+    opacity: 0.5 !important;
+
+}
+
+.list-item_link:hover{
+    color: var(--main-red-color) !important;
+}
+
+.list-item-bullet:hover{
+
 }
 
 
@@ -387,17 +479,17 @@ body {
 
 .uc-l-projects-block a {
     position: relative;
-    transition: all .35s ease-in-out 0s  !important;
+    transition: var(--link-transition)  !important;
     
 }
 
 .uc-l-projects-block a .t-heading {
-    transition: all .35s ease-in-out 0s  !important;
+    transition: var(--link-transition)  !important;
 }
 
 .uc-l-projects-block a:hover .t-heading {
     color: var(--main-red-color) !important;
-    transition: all .35s ease-in-out 0s  !important;
+    transition: var(--link-transition)  !important;
 }
 
 .uc-l-projects-block .t404__imgbox{
@@ -410,7 +502,7 @@ body {
 
 .uc-l-projects-block a:hover .t404__img{
     transform: scale(1.05);
-    transition: all .35s ease-in-out 0s  !important;
+    transition: var(--link-transition)  !important;
 }
 
 
@@ -503,55 +595,6 @@ body {
     transform: translateX(-8px);
 }
 
-/* Универсальные стили для ссылок со стрелками */
-.link-with-arrow{
-    overflow: visible;
-}
-
-.link-with-arrow div{
-    color: var(--main-dark-color) !important;
-    transition: color .35s ease-in-out 0s !important;
-}
-
-.link-with-arrow:hover div{
-    color: var(--main-red-color) !important;
-}
-
-.link-with-arrow .link-arrow_left, .link-with-arrow .link-arrow_right {
-    transition: transform .5s ease-in-out 0s !important;
-} 
-
-.link-arrow_right path, .link-arrow_left path { 
-    fill-opacity: 1 !important;
-    fill: var(--main-dark-color); 
-    transition: fill .35s ease-in-out 0s;
-} 
-
-.link-with-arrow:hover .link-arrow_left path, .link-with-arrow:hover .link-arrow_right path{
-    fill: var(--main-red-color) !important;
-}
-
-.link-with-arrow:hover .link-arrow_left path, .link-with-arrow:hover .link-arrow_right path{
-    fill: var(--main-red-color) !important;
-}.link-with-arrow:hover .link-arrow_left {
-    transform: translateX(-8px);
-}
-
-.link-with-arrow:hover .link-arrow_right {
-    transform: translateX(8px);
-}
-
-.link-with-arrow__disabled {
-    opacity: 0.5 !important;
-}
-
-.link-with-arrow__disabled div {
-    color: var(--main-dark-color) !important;
-}
-
-.link-with-arrow__disabled:hover div {
-    color: var(--main-dark-color) !important;
-}
 /*Блок Компетенции*/
 
 
@@ -561,22 +604,22 @@ body {
 
 
 .competence-bl__linkWrapper [class*="competence-bl__link-"] a, .competence-bl__linkWrapper [class*="competence-bl__link-"] div{
-    transition: all .35s ease-in-out 0s  !important;
+    transition: var(--link-transition)  !important;
 }
 
 .competence-bl__linkWrapper:hover [class*="competence-bl__link-"] a, .competence-bl__linkWrapper:hover [class*="competence-bl__link-"] div {
     color: var(--main-red-color) !important;
-    transition: all .35s ease-in-out 0s  !important;
+    transition: var(--link-transition)  !important;
 }
 
 
 .competence-bl__linkWrapper [class*="competence-bl__link-"] .t-bgimg {
-    transition: all .35s ease-in-out 0s  !important;    
+    transition: var(--link-transition)  !important;    
 }
 
 .competence-bl__linkWrapper:hover [class*="competence-bl__link-"] .t-bgimg {
     transform: scale(1.05);
-    transition: all .35s ease-in-out 0s  !important;  
+    transition: var(--link-transition)  !important;  
 }
 
 
@@ -626,12 +669,12 @@ body {
 
 .FilterByType-ChoiceChip a{
     color: var(--main-red-color) !important;
-    transition: all .35s ease-in-out 0s !important;
+    transition: var(--link-transition) !important;
 }
 
 .FilterByType-ChoiceChip:hover a{
     color: var(--main-dark-color) !important;
-    transition: all .35s ease-in-out 0s !important;
+    transition: var(--link-transition) !important;
 }
 
 .FilterByType-ChoiceChip_active{
@@ -663,12 +706,12 @@ body {
 }
 
 .uc-projects-block a .t404__img, .project-snippet a .t404__img {
-    transition: all .35s ease-in-out 0s !important;
+    transition: var(--link-transition) !important;
 }
 
 .uc-projects-block a:hover .t404__img, .project-snippet a:hover .t404__img {
     transform: scale(1.05);
-    transition: all .35s ease-in-out 0s !important;    
+    transition: var(--link-transition) !important;    
 }
 
 .uc-projects-block .t404__textwrapper {
@@ -677,13 +720,13 @@ body {
 
 
 .uc-projects-block a .t404__title, .project-snippet a .t404__title {
-    transition: all .35s ease-in-out 0s !important;
+    transition: var(--link-transition) !important;
     margin-bottom: 8px;
 }
 
 .uc-projects-block a:hover .t404__title, .project-snippet a:hover .t404__title {
     color: var(--main-red-color) !important;
-    transition: all .35s ease-in-out 0s !important;
+    transition: var(--link-transition) !important;
 }
 
 
@@ -775,13 +818,13 @@ body {
 .uc-binded-project .t406__bg{
     filter: grayscale(1) opacity(0.5) contrast(0.9);
     mix-blend-mode: multiply;
-    transition: all .35s ease-in-out 0s !important;
+    transition: var(--link-transition) !important;
 } 
 
 .uc-binded-project a:hover .t406__bg{
     filter: grayscale(1) opacity(0.5)  contrast(0.9) brightness(1.2);
     transform: scale(1.05);
-    transition: all .35s ease-in-out 0s !important;
+    transition: var(--link-transition) !important;
 }
 
 .uc-binded-project .t406__uptitle, .uc-binded-project .t406__title, .uc-binded-project .t406__text{
