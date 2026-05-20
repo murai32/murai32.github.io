@@ -155,10 +155,10 @@ function composeSlider() {
   snippets.forEach((snippet) => {
     // Перемещаем снипеты в слайдер
     snippet.classList.add("project-snippet");
-    slider.prepend(snippet);
+    slider.append(snippet);
   });
 
-  document.querySelector(".uc-projects-block").remove; // Удаляем блок-донор, что б не было проблем с версткой
+  document.querySelector(".uc-projects-block").remove(); // Удаляем блок-донор, что б не было проблем с версткой
 
   // Тут нужно описать проверку на успешность рекомпозиции
   // 1. Нужно проверить есть ли блок из которого будем брать элементы
