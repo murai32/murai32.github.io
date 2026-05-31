@@ -1,12 +1,14 @@
+let _projectsBlockSelector;
+let _promotingPojectBlockSelector;
 let _projectsData;
 
 
 
-/*ПАРСИМ ИНФОРМАЦИЮ О ПРОЕКТОВ ИЗ БЛОКА "СЕТКА ОБЪЕКТОВ"*/
+/*ПАРСИМ ИНФОРМАЦИЮ О ПРОЕКТАХ ИЗ БЛОКА "СЕТКА ОБЪЕКТОВ"*/
 
-function parseProjectsBlock(blockClass) {
-    const projectsBlock = document.querySelector(blockClass); // ссылка на блок "проекты"
-    const projectsData = document.querySelectorAll(blockClass + ' .t404__tag'); // массив с ссылками на все элементы содержащие строки, которые необходимо привести к JSON и добавить в projects
+function parseProjectsBlock(projectsBlockClass) {
+    const projectsBlock = document.querySelector(projectsBlockClass); // ссылка на блок "проекты"
+    const projectsData = document.querySelectorAll(projectsBlockClass + ' .t404__tag'); // массив с ссылками на все элементы содержащие строки, которые необходимо привести к JSON и добавить в projects
     let projects = []; // Массив для хранения найденной информации парсером
 
     projectsData.forEach((data) => {
@@ -34,8 +36,8 @@ function parseProjectsBlock(blockClass) {
 
 // Интерфейс для получения и обновления JSON объекта с информацией о проектах
 function setProjectsData() {
-    if (!document.querySelector(".uc-l-projects-block").matches(".uc-l-projects-block")) throw new Error("На странице отсутсвует блок 'Последние проекты', либо ему не задан CSS-класс .uc-l-projects-block");
-    _projectsData = parseProjectsBlock(".uc-l-projects-block");
+    if (!document.querySelector(_projectsBlockSelector).matches(_projectsBlockSelector)) throw new Error("На странице отсутсвует блок 'Последние проекты', либо ему не задан CSS-класс .uc-l-projects-block");
+    _projectsData = parseProjectsBlock(_projectsBlockSelector);
 }
 
 // Интерфейс возвращающий данные JSON "Все проекты"
@@ -142,10 +144,38 @@ function placeAwardRibon() {
 }
 
 
+/* ОБРАБАТЫВАЕМ И ДОБАВЛЯЕМ СНИППЕТ "ПРОДВИГАЕМЫЙ ПРОЕКТ" В БЛОК "ПОСЛЕДНИЕ ПРОЕКТЫ"*/ */
+function addPromotedProject(){    
+    const projectsBlock = document.querySelector(projectsBlockClass); // ссылка на блок "проекты"
+    const promotingPojectBlock = document.querySelector(projectsBlockClass); // ссылка на блок "проекты"
+
+
+    if (!document.querySelector(_promotingPojectBlockSelector).matches(_promotingPojectBlockSelector)) { 
+        throw new Error("На странице отсутсвует блок со сниппетом 'Проект которому дается промоушн', либо ему не задан CSS-класс .uc-promoting-project");
+        document.querySelector(_promotingPojectBlockSelector).style.display = "none";   // Скрываем блок со сниппетом 'Проект которому дается промоушн', что бы не было проблем с версткой
+        return false;  // Если блок со сниппетом 'Проект которому дается промоушн' не найден, то функция возвращает false и дальнейшая инициация не запускается
+    }
+
+    let promotingProjectSnippet = document.querySelector(_projectsBlockSelector + ' .t404 .t-container'); // Выбираем первый потомок ".t-container" элмента с селектором _projectsBlockSelector + '.t404'
+        promotingPojectBlock.getElementsByClassName("t-col_8")[0].classList.replace('t-col_8', 't-col_10');    // Меняем сетку в блоке со сниппетом 'Проект которому дается промоушн' на 10ти колоночную
+        // _projectsData = parseProjectsBlock(".uc-l-projects-block");
+
+    promotingProjectSnippet.getElementsByClassName("t404__imgbox")[0].removeAttribute("style"); // Удаляем инлайновый стиль каторый задает высоту изображению из Тильдовского конструктора блока "promotinProjectBlock"
+
+    projectsBlock.getElementsByClassName("t404")[0].appendChild(promotingProjectSnippet); // Перемещаем снипет проекта которому дается промоушн в блок проекты
+    projectsBlock.remove; // Удаляем пустой блок, что бы не было проблем с версткой  
+
+
+}
+
 
 /* ИНИЦИИРУЕМ ВСЕ НЕОБХОДИМЫЕ СКРИПТЫ. Инициация должна находиться в самом низу*/
 document.addEventListener("DOMContentLoaded", function(event) {
+    //  Задаем селекторы обрабатываемых элементов
+    _projectsBlockSelector = ".uc-l-projects-block"; // Блок проекты
+    _promotingPojectBlockSelector = ".uc-promoting-project"; // Блок со сниппетом проекта которому дается промоушн
 
+    addPromotedProject(); // Добавляем сниппет "Проект которому дается промоушн" в блок "Последние проекты"
     projectsBlockChangeGrid(); // Заужаем сетку блока Last-projects-block для вертикального заголовка блока    
     setProjectsData(); //Парсим JSON
     setProjectDate(getProjectsData()); //Ставим даты на карточки проектов
@@ -154,5 +184,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     placeAwardRibon(); // Помещаем ленточку awward на карточку Melon office
 
 
-
 })
+
+
+
