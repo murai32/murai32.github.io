@@ -769,6 +769,14 @@ a.list-item:hover .list-item-text div{
     aspect-ratio: 16 / 10;
 }
 
+#promotingProjectSnippet .t404__textwrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#promotingProjectSnippet .t404__title {
+    font-size: 52px !important;
+}
 
 /*СТРАНИЦА КАРТОЧКА ПРОЕКТА*/
 
