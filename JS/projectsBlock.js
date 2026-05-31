@@ -110,6 +110,9 @@ function projectsBlockImgWrap() {
 
 // Добавляю на карточку проектов ленточики премий
 function placeAwardRibon() {
+// ВНИМАНИЕ ДАННАЯ ФУНКУЦИЯ ТРЕБУЕТ ПОЛНОЙ ПЕРЕРАБОТКИ!!!!
+// НЕОБХОДИМО АВТОМАТИЗИРОВАТЬ ПРИСВОЕНИЕ ТИПА ПРЕМИИ (ЛЕНТОЧКИ)
+// ПАРАМЕТРА НУЖНО ПОЛУЧАТЬ ИЗ JSON ПРОЕКТА КОТОРЫЙ МЫ ПЕРЕДАЕМ В ПАРАМЕТР "ПОДЗАГОЛОВОК" ДАННОГО СНИППЕТА
 
     // Ищем по тексту заголовка элемент в который будем вставлять ленточку
     let targetElm;
@@ -130,7 +133,8 @@ function placeAwardRibon() {
 
     function setHeight() {
         // Задаем высоту элементу обертка ленточки премии (ribbonWrapper) равную изображению .projectItem-Image > div 
-        ribbonWrapper.style.height = document.querySelector('.t404__imgbox').offsetHeight + "px";
+        // ribbonWrapper.style.height = document.querySelector('.t404__imgbox').offsetHeight + "px";
+         ribbonWrapper.style.height = document.getElementsByClassName('t404__imgbox')[1].offsetHeight + "px";
     };
 
     setHeight();
