@@ -150,7 +150,7 @@ function addPromotedProject(){
     let promotingPojectBlock = document.querySelector(_promotingPojectBlockSelector); // ссылка на блок "проект которому дается промоушн"
 
 
-    if (!document.querySelector(_promotingPojectBlockSelector).matches(_promotingPojectBlockSelector)) { 
+    if (!document.querySelector(_promotingPojectBlockSelector)) { 
         throw new Error("На странице отсутсвует блок со сниппетом 'Проект которому дается промоушн', либо ему не задан CSS-класс .uc-promoting-project");
         document.querySelector(_promotingPojectBlockSelector).style.display = "none";   // Скрываем блок со сниппетом 'Проект которому дается промоушн', что бы не было проблем с версткой
         return false;  // Если блок со сниппетом 'Проект которому дается промоушн' не найден, то функция возвращает false и дальнейшая инициация не запускается
