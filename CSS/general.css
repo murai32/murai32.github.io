@@ -774,7 +774,26 @@ a.list-item:hover .list-item-text div{
     flex-direction: column;
 }
 
-#promotingProjectSnippet .t404__title {
+
+
+@media screen and (max-width: 480px){
+    #promotingProjectSnippet .t404__title {
+        font-size: 18px !important;
+    }
+}
+@media screen and (max-width: 640px){  
+    #promotingProjectSnippet .t404__title {
+        font-size: 24px !important;
+    }
+}
+
+@media screen and (min-width:480px) and (max-width:960px){ 
+    #promotingProjectSnippet .t404__title {
+        font-size: 32px !important;
+    }
+}
+@media screen and (max-width: 960px){
+    #promotingProjectSnippet .t404__title {
     font-size: 52px !important;
 }
 
