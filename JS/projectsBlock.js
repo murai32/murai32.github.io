@@ -164,7 +164,7 @@ function addPromotedProject(){
     promotingProjectContainer.getElementsByClassName("t404__imgbox")[0].removeAttribute("style"); // Удаляем инлайновый стиль каторый задает высоту изображению из Тильдовского конструктора блока "promotinProjectBlock"
 
     projectsBlock.getElementsByClassName("t404")[0].prepend(promotingProjectContainer); // Перемещаем снипет проекта которому дается промоушн в блок проекты
-    projectsBlock.remove(); // Удаляем пустой блок, что бы не было проблем с версткой  
+    promotingPojectBlock.remove(); // Удаляем пустой блок, что бы не было проблем с версткой  
 
 
 }
