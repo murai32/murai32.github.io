@@ -144,7 +144,7 @@ function placeAwardRibon() {
 }
 
 
-/* ОБРАБАТЫВАЕМ И ДОБАВЛЯЕМ СНИППЕТ "ПРОДВИГАЕМЫЙ ПРОЕКТ" В БЛОК "ПОСЛЕДНИЕ ПРОЕКТЫ"*/ */
+/* ОБРАБАТЫВАЕМ И ДОБАВЛЯЕМ СНИППЕТ "ПРОДВИГАЕМЫЙ ПРОЕКТ" В БЛОК "ПОСЛЕДНИЕ ПРОЕКТЫ"*/
 function addPromotedProject(){    
     const projectsBlock = document.querySelector(projectsBlockClass); // ссылка на блок "проекты"
     const promotingPojectBlock = document.querySelector(projectsBlockClass); // ссылка на блок "проекты"
