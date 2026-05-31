@@ -812,6 +812,20 @@ a.list-item:hover .list-item-text div{
 /*Конец блока "Лид проекта (текст)"*/
 
 
+/* Блок "Главное изображение" */
+.uc-project-hero-img .t-bgimg{
+    --hero-img-width: calc(100vw - 40px);
+    width: var(--hero-img-width);
+    max-width: 1480px;
+    aspect-ratio: 3 / 2;
+    padding-bottom: initial;
+    margin: 0 auto;
+}
+
+
+/* Конец блока "Главное изображение" */
+
+
 /*Блок "карточка связанного проекта"*/
 .uc-binded-project{
     
