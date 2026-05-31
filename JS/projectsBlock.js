@@ -151,10 +151,11 @@ function addPromotedProject(){
 
 
     if (!document.querySelector(_promotingPojectBlockSelector)) { 
-        throw new Error("На странице отсутсвует блок со сниппетом 'Проект которому дается промоушн', либо ему не задан CSS-класс .uc-promoting-project");
-        document.querySelector(_promotingPojectBlockSelector).style.display = "none";   // Скрываем блок со сниппетом 'Проект которому дается промоушн', что бы не было проблем с версткой
+        console.error("На странице отсутсвует блок со сниппетом 'Проект которому дается промоушн', либо ему не задан CSS-класс .uc-promoting-project. Проверьте наличие данного блока на странице и его CSS-класс, после чего обновите страницу.");
         return false;  // Если блок со сниппетом 'Проект которому дается промоушн' не найден, то функция возвращает false и дальнейшая инициация не запускается
     }
+
+    document.querySelector(_promotingPojectBlockSelector).style.display = "none";   // Скрываем блок со сниппетом 'Проект которому дается промоушн', что бы не было проблем с версткой
 
     let promotingProjectContainer = document.querySelector(_promotingPojectBlockSelector + ' .t404 .t-container'); // Выбираем первый потомок ".t-container" элмента с селектором _projectsBlockSelector + '.t404'
         promotingPojectBlock.getElementsByClassName("t-col_8")[0].id = "promotingProjectSnippet"; // Даем id блоку со сниппетом 'Проект которому дается промоушн' для дальнейшего обращения к нему        
