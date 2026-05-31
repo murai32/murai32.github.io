@@ -156,7 +156,7 @@ function addPromotedProject(){
         return false;  // Если блок со сниппетом 'Проект которому дается промоушн' не найден, то функция возвращает false и дальнейшая инициация не запускается
     }
 
-    let promotingProjectSnippet = document.querySelector(_projectsBlockSelector + ' .t404 .t-container'); // Выбираем первый потомок ".t-container" элмента с селектором _projectsBlockSelector + '.t404'
+    let promotingProjectSnippet = document.querySelector(_promotingPojectBlockSelector + ' .t404 .t-container'); // Выбираем первый потомок ".t-container" элмента с селектором _projectsBlockSelector + '.t404'
         promotingPojectBlock.getElementsByClassName("t-col_8")[0].classList.replace('t-col_8', 't-col_10');    // Меняем сетку в блоке со сниппетом 'Проект которому дается промоушн' на 10ти колоночную
         // _projectsData = parseProjectsBlock(".uc-l-projects-block");
 
