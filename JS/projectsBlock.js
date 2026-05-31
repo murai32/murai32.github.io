@@ -156,14 +156,15 @@ function addPromotedProject(){
         return false;  // Если блок со сниппетом 'Проект которому дается промоушн' не найден, то функция возвращает false и дальнейшая инициация не запускается
     }
 
-    let promotingProjectSnippet = document.querySelector(_promotingPojectBlockSelector + ' .t404 .t-container'); // Выбираем первый потомок ".t-container" элмента с селектором _projectsBlockSelector + '.t404'
+    let promotingProjectContainer = document.querySelector(_promotingPojectBlockSelector + ' .t404 .t-container'); // Выбираем первый потомок ".t-container" элмента с селектором _projectsBlockSelector + '.t404'
+        promotingPojectBlock.getElementsByClassName("t-col_8")[0].id = "promotingProjectSnippet"; // Даем id блоку со сниппетом 'Проект которому дается промоушн' для дальнейшего обращения к нему        
         promotingPojectBlock.getElementsByClassName("t-col_8")[0].classList.replace('t-col_8', 't-col_10');    // Меняем сетку в блоке со сниппетом 'Проект которому дается промоушн' на 10ти колоночную
         // _projectsData = parseProjectsBlock(".uc-l-projects-block");
 
-    promotingProjectSnippet.getElementsByClassName("t404__imgbox")[0].removeAttribute("style"); // Удаляем инлайновый стиль каторый задает высоту изображению из Тильдовского конструктора блока "promotinProjectBlock"
+    promotingProjectContainer.getElementsByClassName("t404__imgbox")[0].removeAttribute("style"); // Удаляем инлайновый стиль каторый задает высоту изображению из Тильдовского конструктора блока "promotinProjectBlock"
 
-    projectsBlock.getElementsByClassName("t404")[0].appendChild(promotingProjectSnippet); // Перемещаем снипет проекта которому дается промоушн в блок проекты
-    projectsBlock.remove; // Удаляем пустой блок, что бы не было проблем с версткой  
+    projectsBlock.getElementsByClassName("t404")[0].prepend(promotingProjectContainer); // Перемещаем снипет проекта которому дается промоушн в блок проекты
+    projectsBlock.remove(); // Удаляем пустой блок, что бы не было проблем с версткой  
 
 
 }

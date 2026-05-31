@@ -765,6 +765,10 @@ a.list-item:hover .list-item-text div{
     border-radius: 6px;
 }
 
+#promotingProjectSnippet .t404__imgbox {
+    aspect-ratio: 16 / 10;
+}
+
 
 /*СТРАНИЦА КАРТОЧКА ПРОЕКТА*/
 
