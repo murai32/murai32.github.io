@@ -942,7 +942,7 @@ a.list-item:hover .list-item-text div{
 /*Конец блока "Смежные проекты"*/
 
 /* Параметры нижней навигационной панели */
-.uc-bottom-nav-panel{
+.uc-bottom-nav-panel, .uc-bottom-nav-panel.uc-bottom-nav-panel_hidden{
     position: fixed;
     bottom: 0;
     opacity: 1;
