@@ -775,7 +775,7 @@ a.list-item:hover .list-item-text div{
 }
 
 @media screen and (max-width: 960px) {
-    #promotingProjectSnippet .t404 .t-col_10 {
+    #promotingProjectSnippet.t-col_10 {
         max-width: 100%;
         margin-bottom: 50px;
     }
