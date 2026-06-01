@@ -956,7 +956,7 @@ a.list-item:hover .list-item-text div{
     border-top: 0.5px solid var(--main-red-color);
     transition: opacity .35s,bottom .35s;
 }
-.uc-bottom-nav-panel_hidden {
+.uc-bottom-nav-panel.uc-bottom-nav-panel_hidden, .uc-bottom-nav-panel_hidden {
     bottom: -60px;
     opacity: 0;
 }
