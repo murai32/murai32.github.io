@@ -774,6 +774,12 @@ a.list-item:hover .list-item-text div{
     flex-direction: column;
 }
 
+@media screen and (max-width: 960px) {
+    #promotingProjectSnippet .t404 .t-col_10 {
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+}
 
 @media screen and (min-width: 961px){
     #promotingProjectSnippet .t404__title {
