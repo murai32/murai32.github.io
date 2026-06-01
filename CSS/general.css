@@ -786,7 +786,8 @@ a.list-item:hover .list-item-text div{
 
 @media screen and (min-width: 961px){
     #promotingProjectSnippet .t404__title {
-    font-size: 52px !important;
+        font-size: 52px !important;
+    }
 }
 
 /*СТРАНИЦА КАРТОЧКА ПРОЕКТА*/
@@ -942,7 +943,7 @@ a.list-item:hover .list-item-text div{
 /*Конец блока "Смежные проекты"*/
 
 /* Параметры нижней навигационной панели */
-.uc-bottom-nav-panel, .uc-bottom-nav-panel.uc-bottom-nav-panel_hidden{
+.uc-bottom-nav-panel {
     position: fixed;
     bottom: 0;
     opacity: 1;
@@ -956,7 +957,8 @@ a.list-item:hover .list-item-text div{
     border-top: 0.5px solid var(--main-red-color);
     transition: opacity .35s,bottom .35s;
 }
-.uc-bottom-nav-panel.uc-bottom-nav-panel_hidden, .uc-bottom-nav-panel_hidden {
+
+.uc-bottom-nav-panel_hidden {
     bottom: -60px;
     opacity: 0;
 }
