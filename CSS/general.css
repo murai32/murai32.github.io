@@ -776,8 +776,11 @@ a.list-item:hover .list-item-text div{
 
 @media screen and (max-width: 960px) {
     #promotingProjectSnippet.t-col_10 {
-        max-width: 100%;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
+    }
+
+    .uc-l-projects-block .t-col_6 {
+        margin-bottom: 30px;
     }
 }
 
