@@ -1136,4 +1136,8 @@ a.list-item:hover .list-item-text div{
 .uc-quotation-block .t090__author {
     width: 100% !important; /*Переопределяем ширину блока автор*/
 }
+
+.uc-quotation-block .t090__autor-title {
+    margin-top: 5px !important;
+}
 /*КОНЕЦ блока "Некторые проекты"*/
