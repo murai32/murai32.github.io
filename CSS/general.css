@@ -1121,3 +1121,15 @@ a.list-item:hover .list-item-text div{
 }
 
 /*КОНЕЦ блока "Некторые проекты"*/
+
+
+/*Блок "Цитата (Тильдовский QT04) "*/
+
+.uc-quotation-block .t090__outer{ /*Меняю цвет верхней границы*/
+    border-top-color: var(--main-green-color) !important;
+}
+
+.uc-quotation-block svg polygon { /*Меняю цвет нижней границы*/
+    fill: var(--main-green-color) !important;
+}
+/*КОНЕЦ блока "Некторые проекты"*/
