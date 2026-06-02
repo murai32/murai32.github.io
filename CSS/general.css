@@ -1132,4 +1132,8 @@ a.list-item:hover .list-item-text div{
 .uc-quotation-block svg polygon { /*Меняю цвет нижней границы*/
     fill: var(--main-green-color) !important;
 }
+
+.uc-adjacent-projects .t090__author {
+    width: 100% !important; /*Переопределяем ширину блока автор*/
+}
 /*КОНЕЦ блока "Некторые проекты"*/
