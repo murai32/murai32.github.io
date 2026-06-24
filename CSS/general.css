@@ -404,6 +404,14 @@ a.list-item:hover .list-item-text div{
     cursor: none !important;
 }
 
+.uc-cookies-popup a{
+    transition: var(--link-transition) !important;
+}
+
+.uc-cookies-popup a:hover{
+    transition: var(--link-transition) !important;
+    color: var(--main-red-color);
+}
 
 /* ПЕРВЫЙ БЛОК НА ГЛАВНОЙ СТРАНИЦЕ */
 /*Ссылки стилей главной навигации*/
