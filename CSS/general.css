@@ -1012,6 +1012,22 @@ a.list-item:hover .list-item-text div{
 
 /*СТРАНИЦА О БЮРО*/
 
+.LOR-inline-btn a{
+    line-height: 22px;
+    font-size: 14px;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-decoration-color: var(--main-green-color-color);
+    text-decoration-thickness: 4px;
+    transition: var(--link-transition);
+}
+
+.LOR-inline-btn a:hover{
+    color: var(--main-red-color);
+    text-decoration-color: var(--main-red-color);
+    transition: var(--link-transition);
+}
+
 /*Блок "Некторые проекты"*/
 .notable-projects {
   position: relative;
