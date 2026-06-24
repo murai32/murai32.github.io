@@ -390,6 +390,10 @@ a.list-item:hover .list-item-text div{
 }
 
 /* Глобальный попап сообщения о куках */
+.uc-cookies-popup>div{
+    box-shadow: 0px 0px 0px 0.5px #ffffff;
+}
+
 .uc-cookies-popup .t-btn{
     transition: var(--link-transition) !important;
     cursor: none !important;
