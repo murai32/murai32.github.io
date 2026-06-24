@@ -1017,7 +1017,7 @@ a.list-item:hover .list-item-text div{
     font-size: 14px;
     text-decoration: underline !important;
     text-decoration-skip-ink: none !important;
-    text-decoration-color: var(--main-green-color-color) !important;
+    text-decoration-color: var(--main-green-color) !important;
     text-decoration-thickness: 4px !important;
     transition: var(--link-transition);
 }
