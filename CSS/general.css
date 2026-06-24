@@ -410,7 +410,7 @@ a.list-item:hover .list-item-text div{
 
 .uc-cookies-popup a:hover{
     transition: var(--link-transition) !important;
-    color: var(--main-red-color);
+    color: var(--main-red-color) !important;
 }
 
 /* ПЕРВЫЙ БЛОК НА ГЛАВНОЙ СТРАНИЦЕ */
