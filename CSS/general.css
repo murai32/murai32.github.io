@@ -389,6 +389,17 @@ a.list-item:hover .list-item-text div{
     opacity: 1;
 }
 
+/* Глобальный попап сообщения о куках */
+.uc-cookies-popup .t-btn{
+    transition: var(--link-transition) !important;
+    cursor: none !important;
+}
+
+.uc-cookies-popup .t-btn:hover{
+    transition: var(--link-transition) !important;
+    cursor: none !important;
+}
+
 
 /* ПЕРВЫЙ БЛОК НА ГЛАВНОЙ СТРАНИЦЕ */
 /*Ссылки стилей главной навигации*/
