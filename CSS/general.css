@@ -391,7 +391,7 @@ a.list-item:hover .list-item-text div{
 
 /* Глобальный попап сообщения о куках */
 .uc-cookies-popup>div{
-    box-shadow: 0px 0px 0px 0.5px #ffffff;
+    box-shadow: 0px 0px 0px 0.5px #ffffff87;
 }
 
 .uc-cookies-popup .t-btn{
