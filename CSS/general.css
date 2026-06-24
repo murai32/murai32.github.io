@@ -1015,16 +1015,16 @@ a.list-item:hover .list-item-text div{
 .LOR-inline-btn a{
     line-height: 22px;
     font-size: 14px;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    text-decoration-color: var(--main-green-color-color);
-    text-decoration-thickness: 4px;
+    text-decoration: underline !important;
+    text-decoration-skip-ink: none !important;
+    text-decoration-color: var(--main-green-color-color) !important;
+    text-decoration-thickness: 4px !important;
     transition: var(--link-transition);
 }
 
 .LOR-inline-btn a:hover{
-    color: var(--main-red-color);
-    text-decoration-color: var(--main-red-color);
+    color: var(--main-red-color) !important;
+    text-decoration-color: var(--main-red-color) !important;
     transition: var(--link-transition);
 }
 
