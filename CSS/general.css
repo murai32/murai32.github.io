@@ -1012,7 +1012,7 @@ a.list-item:hover .list-item-text div{
 
 .uc-order-popup .t-checkbox__indicator{
     border-radius: 2px;
-    border: 1.5px solid hsl(204 7% 44% / 1) !important;
+    border: 1.5px solid  #1a202487 !important;
 }
 
 .uc-order-popup .t-checkbox__indicator:after {
