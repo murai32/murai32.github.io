@@ -129,7 +129,7 @@ function placeAwardRibon() {
 
     // Создаем элемент изображение с лого премии
     let ribbonImg = document.createElement('img');
-    ribbonImg.setAttribute('src', 'https://gist.githubusercontent.com/murai32/24b54e76db904cc20e0f9f5d8f57c783/raw/8cf84daeb350986066aa3790fd03bf8aa22c2f2a/logo_boa_Winner_2020_f-02-B.svg');
+    ribbonImg.setAttribute('src', 'https://raw.githubusercontent.com/murai32/murai32.github.io/refs/heads/master/Assets/logo_boa_Winner_2020_f-02-B.svg');
 
     function setHeight() {
         // Задаем высоту элементу обертка ленточки премии (ribbonWrapper) равную изображению .projectItem-Image > div 
