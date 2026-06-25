@@ -1010,6 +1010,23 @@ a.list-item:hover .list-item-text div{
     font-size:18px;
 }
 
+.uc-order-popup .t-checkbox__indicator{
+    border-radius: 2px;
+    border: 1.5px solid hsl(204 7% 44% / 1) !important;
+}
+
+.uc-order-popup .t-checkbox__indicator:after {
+    border-color: #ee6b62;
+    transform: rotate(45deg) scale(1.3);
+}
+
+.uc-order-popup .checkbox__control span{
+    font-size: 14px;
+    display: inline-block;
+    padding-top: 2px;
+    line-height: 1.25;
+}
+
 @media screen and (max-width: 560px) {
     
     .uc-order-popup .t-popup__container{
