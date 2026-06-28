@@ -1053,7 +1053,7 @@ a.list-item:hover .list-item-text div{
 
 /*СТРАНИЦА УСЛУГИ*/
 .uc-services-list-acc .t849__trigger-button svg, .uc-services-list-acc .t849__trigger-button:hover svg{
-    transition: var(--link-transition);
+    transition: var(--link-transition) !important;
 }
 
 
