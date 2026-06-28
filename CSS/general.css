@@ -1052,8 +1052,17 @@ a.list-item:hover .list-item-text div{
 /*КОНЕЦ ГЛОБАЛЬНЫЕ СТИЛИ (общие настройки)*/
 
 /*СТРАНИЦА УСЛУГИ*/
-.uc-services-list-acc .t849__trigger-button svg, .uc-services-list-acc .t849__trigger-button:hover svg{
+.uc-services-list-acc .t-name, .uc-services-list-acc .t-name:hover{
     transition: var(--link-transition) !important;
+}
+
+.uc-services-list-acc .t-name:hover{
+    color: var(--main-dark-color) !important;
+    transition: var(--link-transition) !important;
+}
+
+.uc-services-list-acc .t849__trigger-button svg, .uc-services-list-acc .t849__trigger-button:hover svg{
+    transition: all 1s cubic-bezier(0.89, 0.55, 0.32, 0.92) !important;
 }
 
 
