@@ -304,6 +304,53 @@ function wrapMainMenuCloseBtn() {
 
 
 
+/** * ФУНКЦИЯ СБРАСЫВАЕТ ПРОПОРЦИИ КОНТЕЙНЕРОВ ПОД ИСХОДНЫЙ ФОРМАТ ИЗОБРАЖЕНИЙ ВНУТРИ КОНКРЕТНОГО БЛОКА
+ * * @description Функция писалась под Тильдовский блок GL-12, под другие блоки не тестировалась.
+ * @param {string} blockId - Селектор родительского блока из настроек Тильды (например: '#rec2422286971')
+ * * @example
+ * // Вызов функции путем добавления блока T123 под каждым блоком GL-12:
+ * <script>
+ * document.addEventListener("DOMContentLoaded", function() {
+ * resetImageAspectRatios('#rec2423401071');
+ * });
+ * </script> 
+ */
+function resetImageAspectRatios(blockId) {
+    const imgBlocks = document.querySelectorAll(blockId + ' .t603__blockimg');
+
+    imgBlocks.forEach(function(block) {
+        // Удаляем жестко заданный Tilda padding-bottom
+        block.style.paddingBottom = '0';
+        
+        // Получаем ссылку на оригинальное изображение
+        const imgUrl = block.getAttribute('data-original');
+        
+        if (imgUrl) {
+            const img = new Image();
+            img.src = imgUrl;
+            
+            img.onload = function() {
+                // Считаем оригинальные пропорции (Высота / Ширина)
+                const ratio = img.height / img.width;
+                
+                // Функция обновления высоты блока в зависимости от его текущей ширины
+                function updateHeight() {
+                    const currentWidth = block.clientWidth;
+                    block.style.height = (currentWidth * ratio) + 'px';
+                }
+                
+                // Гарантируем, что фоновое изображение поместится целиком без обрезания
+                block.style.backgroundSize = 'contain';
+                
+                // Первичный расчет высоты и привязка к изменению размера окна
+                updateHeight();
+                window.addEventListener('resize', updateHeight);
+            };
+        }
+    });
+}
+
+
 /* ИНИЦИИРУЕМ ВСЕ НЕОБХОДИМЫЕ СКРИПТЫ. Инициация должна находиться в самом низу*/
 document.addEventListener("DOMContentLoaded", function(event) {
 
