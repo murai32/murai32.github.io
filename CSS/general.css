@@ -1051,7 +1051,10 @@ a.list-item:hover .list-item-text div{
 
 /*КОНЕЦ ГЛОБАЛЬНЫЕ СТИЛИ (общие настройки)*/
 
-
+/*СТРАНИЦА УСЛУГИ*/
+.uc-services-list-acc .t849__trigger-button {
+    transition: var(--link-transition);
+}
 
 
 /*СТРАНИЦА О БЮРО*/
