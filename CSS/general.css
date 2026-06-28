@@ -1052,11 +1052,11 @@ a.list-item:hover .list-item-text div{
 /*КОНЕЦ ГЛОБАЛЬНЫЕ СТИЛИ (общие настройки)*/
 
 /*СТРАНИЦА УСЛУГИ*/
-.uc-services-list-acc .t-name, .uc-services-list-acc .t-name:hover{
+.uc-services-list-acc .t849__trigger-button .t-name, .uc-services-list-acc .t849__trigger-button:hover .t-name{
     transition: var(--link-transition) !important;
 }
 
-.uc-services-list-acc .t-name:hover{
+.uc-services-list-acc .t849__trigger-button:hover .t-name{
     color: var(--main-dark-color) !important;
     transition: var(--link-transition) !important;
 }
