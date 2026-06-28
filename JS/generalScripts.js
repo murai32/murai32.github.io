@@ -44,7 +44,7 @@ function initCustomCursor() {
     */
     document.addEventListener("mouseover", function(e) {
         // 1. Проверяем, навели ли на ссылку (или элемент внутри ссылки)
-        if (e.target.closest("a")) {
+        if (e.target.closest("a, button")) {
             cursor.classList.add("custom-cursor--link");
         }
 
@@ -60,7 +60,7 @@ function initCustomCursor() {
 
     document.addEventListener("mouseout", function(e) {
         // 1. Убираем класс ссылки, если ушли с неё
-        if (e.target.closest("a")) {
+        if (e.target.closest("a, button")) {
             cursor.classList.remove("custom-cursor--link");
         }
 
