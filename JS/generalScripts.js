@@ -26,91 +26,81 @@ function isInPage(node) {
 /*Логика работы инверсионноо курсора*/
 
 function initCustomCursor() {
+    /* Требует подключения библиотеки!
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"> */
+    
+    if (typeof isMobile !== 'undefined' && isMobile) return; // Защита, если переменная exists
 
-    /*Требует подключения библиотеки!
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js">*/
-    if (!isMobile) {
-        let cursor = document.createElement('div');
-        cursor.classList.add("custom-cursor");
-        cursor.style.cssText = 'left: 1392px; top: 102px; opacity: 0;';
-        document.body.appendChild(cursor);
+    let cursor = document.createElement('div');
+    cursor.classList.add("custom-cursor");
+    cursor.style.cssText = 'left: 1392px; top: 102px; opacity: 0;';
+    document.body.appendChild(cursor);
 
+    // SVG иконка для зума
+    const zoomPic = '<div class="custom-cursor__Background"></div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 11H13V2H11V11H2V13H11V22H13V13H22V11Z"/></svg>';
 
-        /*Вешаем слушателей событий на каждую ссылочку*/
-        let links = document.querySelectorAll("a");
-        for (let i = 0; i < links.length; i++) {
-            let selfLink = links[i];
-
-            selfLink.addEventListener("mouseover", function() {
-                cursor.classList.add("custom-cursor--link");
-            });
-            selfLink.addEventListener("mouseout", function() {
-                cursor.classList.remove("custom-cursor--link");
-            });
+    /* Используем делегирование событий через mouseover/mouseout на уровне всего документа.
+      Это полностью решает проблему с Tilda Lazy Load и динамическими элементами.
+    */
+    document.addEventListener("mouseover", function(e) {
+        // 1. Проверяем, навели ли на ссылку (или элемент внутри ссылки)
+        if (e.target.closest("a")) {
+            cursor.classList.add("custom-cursor--link");
         }
 
-        /*Вешаем слушателей событий на каждую ссылочку*/
-        window.setTimeout(function() {
-            /*Вызова функции setTimout  в данном случае костыль. 
+        // 2. Проверяем, навели ли на зум-картинку Тильды
+        if (e.target.closest('.t-zoomable, .t-zoomer__show .t-carousel__zoomer__inner')) {
+            const zoomElement = e.target.closest('.t-zoomable, .t-zoomer__show .t-carousel__zoomer__inner');
             
-            Проблема: "На странице подключен Тильдовский Lazy Load, 
-            который подгружает изображения на которые необходимо повесить 
-            обработчики событий после события DOMContentLoaded.
-            Корректным решением будет обрабатываеть событие тильдовского 
-            скрипта Lazy Load, если данные скрипт генерирует события.
-            
-            Тикет: https://www.notion.so/pavel-bogatyi/onMouseIn-onMouseOut-2157fecc3b8c42219932664d02000ec6
-            " */
+            zoomElement.style.cursor = 'none'; // Прячем стандартный курсор
+            cursor.classList.add("custom-cursor--zoom");
+            cursor.innerHTML = zoomPic;
+        }
+    });
 
-            let zoomControls = document.querySelectorAll('.t-zoomable, .t-zoomer__show .t-carousel__zoomer__inner, .t-zoomer__show .t-zoomable');
-            console.log(zoomControls.length);
+    document.addEventListener("mouseout", function(e) {
+        // 1. Убираем класс ссылки, если ушли с неё
+        if (e.target.closest("a")) {
+            cursor.classList.remove("custom-cursor--link");
+        }
 
-            for (let i = 0; i < zoomControls.length; i++) {
-                let selfLink = zoomControls[i];
-                let pic = '<div class="custom-cursor__Background"></div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 11H13V2H11V11H2V13H11V22H13V13H22V11Z"/></svg>';
-
-                selfLink.style.cursor = 'none'; // убираем курсор на ховер изображения
-                selfLink.addEventListener("mouseover", function() {
-                    cursor.classList.add("custom-cursor--zoom");
-                    cursor.innerHTML = pic;
-                });
-                selfLink.addEventListener("mouseout", function() {
-                    cursor.classList.remove("custom-cursor--zoom");
-                    cursor.innerHTML = '';
-                });
-            }
-        }, 250);
+        // 2. Сбрасываем зум-курсор, если ушли с картинки
+        if (e.target.closest('.t-zoomable, .t-zoomer__show .t-carousel__zoomer__inner')) {
+            cursor.classList.remove("custom-cursor--zoom");
+            cursor.innerHTML = '';
+        }
+    });
 
 
+    /* Логика передвижения курсора */
+    let initCursor = false;
+    
+    window.onmousemove = function(e) {
+        let mouseX = e.clientX;
+        let mouseY = e.clientY;
 
-
-        /*Логика передвижения курсора*/
-        let initCursor = false;
-        window.onmousemove = function(e) {
-            let mouseX = e.clientX;
-            let mouseY = e.clientY;
-
-            if (!initCursor) {
-                TweenLite.to(cursor, 0.3, {
-                    opacity: 1
-                });
-                initCursor = true;
-            }
-
-            TweenLite.to(cursor, 0, {
-                top: mouseY + "px",
-                left: mouseX + "px"
+        if (!initCursor) {
+            TweenLite.to(cursor, 0.3, {
+                opacity: 1
             });
-        };
+            initCursor = true;
+        }
 
+        TweenLite.to(cursor, 0, {
+            top: mouseY + "px",
+            left: mouseX + "px"
+        });
+    };
 
-        window.onmouseout = function(e) {
+    window.onmouseout = function(e) {
+        // Проверяем, что мышь действительно покинула окно браузера (а не перешла на другой тег)
+        if (!e.relatedTarget && !e.toElement) {
             TweenLite.to(cursor, 0.3, {
                 opacity: 0
             });
             initCursor = false;
-        };
-    }
+        }
+    };
 }
 
 
